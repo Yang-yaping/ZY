@@ -1,5 +1,7 @@
 # 在线演示部署
 
+已发布演示：https://yuping.streamlit.app/ 。源码：https://github.com/Yang-yaping/ZY 。实际验证范围见 ONLINE-VALIDATION.md。
+
 公开代码不包含运行数据库、私钥、真实账户或个人报告。
 
 在 Streamlit Community Cloud 中连接实际拥有仓库的 GitHub 账号，选择代码所在仓库、main 分支、入口 cloud_app.py，Python 版本选择3.12。requirements.txt 和 .streamlit/config.toml 随源码一起提交。部署完成后再将平台实际提供的 streamlit.app 网址发给老师。

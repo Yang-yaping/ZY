@@ -1,0 +1,19 @@
+test_atomic_concurrent (test_protocol.Tests) ... ok
+test_cancel_owner_balance (test_protocol.Tests) ... ok
+test_cut_choose_failure_refund (test_protocol.Tests) ... ok
+test_cut_choose_probability (test_protocol.Tests) ... ok
+test_double_spend (test_protocol.Tests) ... ok
+test_equal_challenge_boundary (test_protocol.Tests) ... ok
+test_forgery (test_protocol.Tests) ... ok
+test_frozen_and_no_reuse (test_protocol.Tests) ... ok
+test_invalid_and_retry (test_protocol.Tests) ... ok
+test_legal_anonymous_offline (test_protocol.Tests) ... ok
+test_persisted_terminal_and_challenge (test_protocol.Tests) ... ok
+test_random_freshness (test_protocol.Tests) ... ok
+test_response_and_guard (test_protocol.Tests) ... ok
+test_two_merchants_concurrent (test_protocol.Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 7.790s
+
+OK
