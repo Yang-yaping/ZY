@@ -1,5 +1,7 @@
 # 隐币实验室：简化离线电子现金
 
+在线演示：[打开隐币实验室](https://yuping.streamlit.app/)。示例账户为 `alice`、`shop_a`、`shop_b`，密码均为 `DemoCash2026!`。线上实际验证范围见 [ONLINE-VALIDATION.md](docs/ONLINE-VALIDATION.md)。
+
 ## 公开网页运行
 
 本仓库同时提供本地版与在线演示入口。Streamlit Community Cloud 部署请选 `cloud_app.py`、`main` 分支及Python 3.12。在线版为每位浏览器访客分配独立实验数据库，并自动建立alice、shop_a、shop_b三个示例账户，密码均为`DemoCash2026!`。每位访客分别完成三角色流程；不要跨两个独立浏览器会话做同一次实验。数据可能随新会话或服务重启重置，仅使用虚拟信息。更多说明见[部署说明](docs/DEPLOY.md)。

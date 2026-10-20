@@ -29,7 +29,7 @@ role=st.sidebar.radio('实验工作台',['总览','银行','付款人','收款�
 if CLOUD:
     st.sidebar.caption('在线版：每位访客独立实验；刷新或服务重启后可能重置。仅使用虚拟信息。')
     st.sidebar.write('示例账户：alice、shop_a、shop_b')
-    st.sidebar.code(DEMO_PASSWORD, language=None)
+    st.sidebar.write('示例密码：' + DEMO_PASSWORD)
 st.sidebar.caption('本机教学模拟器 · 固定面额 10\n\n角色切换用于观察协议，不提供生产级权限隔离。')
 
 def run(fn):
