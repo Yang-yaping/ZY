@@ -17,5 +17,3 @@ python -m unittest discover -s tests -v
 python tests/ui_flow.py
 python tests/cloud_flow.py
 ```
-
-GitHub Pages 无法运行该Python应用。将源码放入GitHub仅完成代码托管，还需要网页运行平台。需要平台授权或同意服务条款时由账号本人确认。
