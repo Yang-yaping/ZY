@@ -4,7 +4,7 @@
 
 ## 公开网页运行
 
-本仓库同时提供本地版与在线演示入口。Streamlit Community Cloud 部署请选 `cloud_app.py`、`main` 分支及Python 3.12。在线版为每位浏览器访客分配独立实验数据库，并自动建立alice、shop_a、shop_b三个示例账户，密码均为`DemoCash2026!`。每位访客分别完成三角色流程；不要跨两个独立浏览器会话做同一次实验。数据可能随新会话或服务重启重置，仅使用虚拟信息。更多说明见[部署说明](docs/DEPLOY.md)。
+本仓库同时提供本地版与在线演示入口。在线版为每位浏览器访客分配独立实验数据库，并自动建立alice、shop_a、shop_b三个示例账户，密码均为`DemoCash2026!`。每位访客分别完成三角色流程；不要跨两个独立浏览器会话做同一次实验。数据可能随新会话或服务重启重置，仅使用虚拟信息。更多说明见[部署说明](docs/DEPLOY.md)。
 
 ```sh
 python -m streamlit run cloud_app.py
@@ -12,7 +12,7 @@ python -m streamlit run cloud_app.py
 
 上传GitHub只完成源码托管；公开演示网址以网页托管平台实际部署成功后显示的地址为准。
 
-Python + Streamlit + SQLite，面向《第一章.pdf》第16节。三角色教学演示，不用于真实资产。
+三角色教学演示，不用于真实资产。
 
 ## 快速启动
 
@@ -28,7 +28,7 @@ ECASH_DATA=data python -m streamlit run app.py --server.address 127.0.0.1
 浏览器打开 http://localhost:8501 。Windows 激活命令为 `.venv\Scripts\activate`；PowerShell 先执行 `$env:ECASH_DATA="data"`，再运行 `python -m streamlit run app.py`。
 离线运行指支付协议不连接银行；首次安装软件仍需网络。依赖安装后整个演示可在断网环境运行。
 
-## 五分钟演示
+## 试用
 
 1. 银行页生成密钥。创建付款人 `alice`、商户 `shop_a` 与 `shop_b`，自行设至少8位密码。付款人获100实验单位，商户初始0。固定面额10。
 2. 付款人页登录，依次点击生成候选、提交盲化值、回应抽查并去盲。N默认16，挑战位t默认32。
@@ -39,14 +39,6 @@ ECASH_DATA=data python -m streamlit run app.py --server.address 127.0.0.1
 7. 伪造：导出公共现金JSON，修改 signature 为 `2`，在收款人页导入，银行验签失败。
 
 同一付款人可生成多条钱包记录。页面不会提供固定挑战或伪随机种子。相同挑战边界用自动化测试注入，以保证可重复，不改动正式协议路径。
-
-## 测试
-
-```sh
-python -m unittest discover -s tests -v
-```
-
-无需额外测试依赖。`docs/test-results.txt` 是实际核心测试输出；`docs/VALIDATION.md` 说明页面验证范围。测试使用临时目录，不污染演示账户。每次生成新随机量；为了确定覆盖概率边界，仅局部测试替换商户随机位。并发测试使用真实独立 SQLite 连接。
 
 ## 文件结构
 
