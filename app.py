@@ -9,7 +9,9 @@ from ecash.crypto import ProtocolError, verify_cash
 from ecash.runtime import session_root, bootstrap, DEMO_PASSWORD
 
 st.set_page_config(page_title='隐币实验室 · Offline Cash',page_icon='◈',layout='wide')
-CLOUD=st.session_state.get('_cash_cloud', False)
+# Public deployment defaults to one independent sandbox per visitor.
+# Explicit ECASH_DATA selects persistent local mode; cloud_app.py forces cloud mode.
+CLOUD=st.session_state.get('_cash_cloud', 'ECASH_DATA' not in os.environ)
 ROOT=session_root(st.session_state) if CLOUD else Path(os.environ.get('ECASH_DATA',Path(__file__).parent/'data'))
 bank=Bank(ROOT/'bank.db')
 if CLOUD:

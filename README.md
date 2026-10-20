@@ -20,10 +20,10 @@ Python + Streamlit + SQLite，面向《第一章.pdf》第16节。三角色教�
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-python -m streamlit run app.py --server.address 127.0.0.1
+ECASH_DATA=data python -m streamlit run app.py --server.address 127.0.0.1
 ```
 
-浏览器打开 http://localhost:8501 。Windows 激活命令为 `.venv\Scripts\activate`。
+浏览器打开 http://localhost:8501 。Windows 激活命令为 `.venv\Scripts\activate`；PowerShell 先执行 `$env:ECASH_DATA="data"`，再运行 `python -m streamlit run app.py`。
 离线运行指支付协议不连接银行；首次安装软件仍需网络。依赖安装后整个演示可在断网环境运行。
 
 ## 五分钟演示
@@ -57,7 +57,7 @@ python -m unittest discover -s tests -v
 - `docs/DESIGN.md`：协议、状态、数据库和安全边界。
 - `docs/REPORT_MATERIALS.md`：对应上传DOC模板的报告素材及截图清单。
 
-默认数据位于 `data/`，首次运行建立三个逻辑区域：`bank.db`、`wallets/<账户>.db`、`merchants/<商户>.db`。可设置 `ECASH_DATA` 指向另一目录以创建独立实验。关停程序后换一个空目录即可开始新实验；请勿只删除银行数据库而保留旧钱包。
+公开部署副本的 `app.py` 与 `cloud_app.py` 默认均使用访客独立在线模式；`cloud_app.py` 始终强制在线模式。通过 `start.command` 或显式设置 `ECASH_DATA=data` 运行 `app.py`，即可使用本地持久模式。本地数据位于指定目录，首次运行建立三个逻辑区域：`bank.db`、`wallets/<账户>.db`、`merchants/<商户>.db`。关停程序后换一个空目录即可开始新实验；请勿只删除银行数据库而保留旧钱包。
 
 ## 重要边界
 
