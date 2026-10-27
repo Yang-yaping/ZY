@@ -1,0 +1,25 @@
+test_bad_signature_even_when_all_hashes_recomputed (test_lab.CryptoTests.test_bad_signature_even_when_all_hashes_recomputed) ... ok
+test_bitcoin_merkle_odd_leaf (test_lab.CryptoTests.test_bitcoin_merkle_odd_leaf) ... ok
+test_duplicate_spend_and_previous_hash (test_lab.CryptoTests.test_duplicate_spend_and_previous_hash) ... ok
+test_inflation_signed_with_correct_key (test_lab.CryptoTests.test_inflation_signed_with_correct_key) ... ok
+test_input_bounds (test_lab.CryptoTests.test_input_bounds) ... ok
+test_merkle_and_payload_separately (test_lab.CryptoTests.test_merkle_and_payload_separately) ... ok
+test_public_fixture_roundtrip_and_truncation (test_lab.CryptoTests.test_public_fixture_roundtrip_and_truncation) ... ok
+test_tampered_body (test_lab.CryptoTests.test_tampered_body) ... ok
+test_three_blocks_real_scripts_and_utxo (test_lab.CryptoTests.test_three_blocks_real_scripts_and_utxo) ... ok
+test_ttl_and_failure_threshold (test_lab.CryptoTests.test_ttl_and_failure_threshold) ... ok
+test_101_nodes_join_discovery_and_maintenance (test_lab.NetworkTests.test_101_nodes_join_discovery_and_maintenance) ... ok
+test_counts_one_two_three_ten (test_lab.NetworkTests.test_counts_one_two_three_ten) ... ok
+test_exhausted_retry_cancels_sibling_downloads (test_lab.NetworkTests.test_exhausted_retry_cancels_sibling_downloads) ... ok
+test_failures_recover_and_corrupt_data_is_rejected (test_lab.NetworkTests.test_failures_recover_and_corrupt_data_is_rejected) ... ok
+test_resume_saves_retransmitted_bytes (test_lab.NetworkTests.test_resume_saves_retransmitted_bytes) ... ok
+test_server_rejects_invalid_request (test_lab.NetworkTests.test_server_rejects_invalid_request) ... ok
+test_disconnect_run_and_event_display (test_ui.UITests.test_disconnect_run_and_event_display) ... 2026-10-27 14:15:36.131 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_normal_run_and_metrics (test_ui.UITests.test_normal_run_and_metrics) ... 2026-10-27 14:15:42.173 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 9.839s
+
+OK

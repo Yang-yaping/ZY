@@ -1,10 +1,11 @@
 .venv/
 __pycache__/
-data/
-*.db*
+*.pyc
 .DS_Store
-.env
-.env.*
+data/
+tmp/
+deliverables/
+*.db
+*.db-wal
+*.db-shm
 .streamlit/secrets.toml
-*.pem
-*.key

@@ -1,0 +1,64 @@
+{
+  "started_utc": "2026-10-27T05:06:50.389790+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "processor": "arm",
+  "packages": {
+    "python-bitcoinlib": "0.12.2",
+    "streamlit": "1.66.1",
+    "matplotlib": "3.11.2"
+  },
+  "repetitions": 3,
+  "topology_seed": 20261027,
+  "initial_nodes": 100,
+  "joined_nodes": 1,
+  "profiles": {
+    "normal": {
+      "latency": 0.002,
+      "rate": 16777216
+    },
+    "disconnect": {
+      "latency": 0.002,
+      "rate": 16777216
+    },
+    "unresponsive": {
+      "latency": 0.002,
+      "rate": 16777216
+    },
+    "overloaded": {
+      "latency": 0.002,
+      "rate": 16777216
+    },
+    "congested": {
+      "latency": 0.015,
+      "rate": 2097152
+    }
+  },
+  "sizes_bytes": [
+    65536,
+    262144,
+    1048576
+  ],
+  "sync_counts": [
+    1,
+    2,
+    3,
+    10
+  ],
+  "transport": "real TCP on 127.0.0.1; application-layer delay/shared FIFO shaping",
+  "private_keys_exported": false,
+  "source_hashes": {
+    "lab/__init__.py": "d0616b6c8abeeb4e49d0239dc008309a1ec589bef612f330c651d8b6d6552df3",
+    "lab/blocks.py": "b137d472bf14599186868cd64829a8f3a57298291ef9d855675facd717858900",
+    "lab/demo.py": "8de3a7a44b911dca2560ef53c55efeec16d607327a6456bf4251bc6c12e2ddc2",
+    "lab/network.py": "b94781acb336f008142e9334689c59bd7e4b52a7c84240299139f6917a379a1e",
+    "lab/storage.py": "3e9679edb8b767ee299057d35d50acb80f8945e2e5b208ba76e64ffccfc43a73"
+  },
+  "finished_utc": "2026-10-27T05:09:37.644786+00:00",
+  "wall_elapsed_s": 167.25410808390006,
+  "sync_runs": 360,
+  "successful_sync_runs": 360,
+  "discovery_runs": 12,
+  "load_runs": 24,
+  "source_unchanged_during_run": true
+}

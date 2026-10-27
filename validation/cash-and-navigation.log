@@ -1,0 +1,25 @@
+test_cash_withdrawal_p2p_roundtrip_and_session_isolation (test_navigation.NavigationTests.test_cash_withdrawal_p2p_roundtrip_and_session_isolation) ... 2026-10-27 14:15:32.947 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-27 14:15:42.229 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_atomic_concurrent (test_protocol.Tests.test_atomic_concurrent) ... ok
+test_cancel_owner_balance (test_protocol.Tests.test_cancel_owner_balance) ... ok
+test_cut_choose_failure_refund (test_protocol.Tests.test_cut_choose_failure_refund) ... ok
+test_cut_choose_probability (test_protocol.Tests.test_cut_choose_probability) ... ok
+test_double_spend (test_protocol.Tests.test_double_spend) ... ok
+test_equal_challenge_boundary (test_protocol.Tests.test_equal_challenge_boundary) ... ok
+test_forgery (test_protocol.Tests.test_forgery) ... ok
+test_frozen_and_no_reuse (test_protocol.Tests.test_frozen_and_no_reuse) ... ok
+test_invalid_and_retry (test_protocol.Tests.test_invalid_and_retry) ... ok
+test_legal_anonymous_offline (test_protocol.Tests.test_legal_anonymous_offline) ... ok
+test_persisted_terminal_and_challenge (test_protocol.Tests.test_persisted_terminal_and_challenge) ... ok
+test_random_freshness (test_protocol.Tests.test_random_freshness) ... ok
+test_response_and_guard (test_protocol.Tests.test_response_and_guard) ... ok
+test_two_merchants_concurrent (test_protocol.Tests.test_two_merchants_concurrent) ... ok
+test_untrusted_workspace_cannot_escape_directory (test_runtime.RuntimeTests.test_untrusted_workspace_cannot_escape_directory) ... ok
+test_visitors_get_distinct_workspaces (test_runtime.RuntimeTests.test_visitors_get_distinct_workspaces) ... ok
+test_workspace_is_stable_within_session (test_runtime.RuntimeTests.test_workspace_is_stable_within_session) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 12.225s
+
+OK

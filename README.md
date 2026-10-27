@@ -1,59 +1,66 @@
-# 隐币实验室：简化离线电子现金
+# 隐币实验室
 
-在线演示：[打开隐币实验室](https://yuping.streamlit.app/)。示例账户为 `alice`、`shop_a`、`shop_b`，密码均为 `DemoCash2026!`。线上实际验证范围见 [ONLINE-VALIDATION.md](docs/ONLINE-VALIDATION.md)。
+在线演示：[打开隐币实验室](https://yuping.streamlit.app/)。源码：[Yang-yaping/ZY](https://github.com/Yang-yaping/ZY)。
 
-## 公开网页运行
+同一个 Streamlit 网站中的两个独立课程实验，使用侧栏“实验项目”切换。
 
-本仓库同时提供本地版与在线演示入口。在线版为每位浏览器访客分配独立实验数据库，并自动建立alice、shop_a、shop_b三个示例账户，密码均为`DemoCash2026!`。每位访客分别完成三角色流程；不要跨两个独立浏览器会话做同一次实验。数据可能随新会话或服务重启重置，仅使用虚拟信息。更多说明见[部署说明](docs/DEPLOY.md)。
+- **离线电子现金**：保留原来的总览、银行、付款人、收款人、场景与验收。支持盲RSA、cut-and-choose、离线随机挑战、SQLite原子存款与双花身份恢复。
+- **P2P 网络与区块同步**：新增101节点本机TCP实验、1/2/3/10区块同步、网络异常、策略对比、Bitcoin Script P2PKH、Merkle与UTXO校验，以及已实际运行的批量数据。
 
-```sh
-python -m streamlit run cloud_app.py
-```
+切换实验时，电子现金账户与钱包保持在同一访客沙箱中；P2P结果也会保留。两个实验独立使用各自的数据和状态。P2P演示没有将原来的银行式离线电子现金改成公链。
 
-上传GitHub只完成源码托管；公开演示网址以网页托管平台实际部署成功后显示的地址为准。
+## 本地启动
 
-三角色教学演示，不用于真实资产。
+建议 Python 3.12。在文件夹内逐行运行：
 
-## 快速启动
-
-需要 Python 3.10+。macOS 可双击 `start.command`，首次需网络下载依赖。或终端进入本目录：
-
-```sh
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-ECASH_DATA=data python -m streamlit run app.py --server.address 127.0.0.1
+python -m streamlit run app.py --server.address 127.0.0.1 --server.port 8503
 ```
 
-浏览器打开 http://localhost:8501 。Windows 激活命令为 `.venv\Scripts\activate`；PowerShell 先执行 `$env:ECASH_DATA="data"`，再运行 `python -m streamlit run app.py`。
-离线运行指支付协议不连接银行；首次安装软件仍需网络。依赖安装后整个演示可在断网环境运行。
+打开 `http://127.0.0.1:8503`。Mac 可双击 `start.command`。Windows 激活虚拟环境使用 `.venv\Scripts\activate`，其余 Python 命令相同；Windows尚未实际验证。
 
-## 试用
+首次安装依赖需要联网。程序需要可供 python-bitcoinlib 加载的 OpenSSL；出现 SSL 加载错误时应配置匹配的库，不能跳过验签。停止网页服务：在启动终端按 Control+C。
 
-1. 银行页生成密钥。创建付款人 `alice`、商户 `shop_a` 与 `shop_b`，自行设至少8位密码。付款人获100实验单位，商户初始0。固定面额10。
-2. 付款人页登录，依次点击生成候选、提交盲化值、回应抽查并去盲。N默认16，挑战位t默认32。
-3. 收款人页选择 shop_a 和现金，点击验签并生成挑战。
-4. 付款人页选择该现金和待回应挑战，生成响应。
-5. shop_a 点击离线验收，再提交银行，显示 CREDITED。银行页观察余额和独立存款记录。
-6. shop_b 对同一现金重新发起挑战。付款人明确开启双花攻击演示后回应。shop_b 仍能离线验收，存款时银行不再入账；若挑战至少一位不同，恢复 alice 的身份。
-7. 伪造：导出公共现金JSON，修改 signature 为 `2`，在收款人页导入，银行验签失败。
+默认每位访客使用独立临时沙箱，示例账户为 alice、shop_a、shop_b，示例密码 `DemoCash2026!`。仅使用虚拟信息。会话刷新或服务重启后可能重置，角色切换仅用于观察协议，不是安全权限隔离。
 
-同一付款人可生成多条钱包记录。页面不会提供固定挑战或伪随机种子。相同挑战边界用自动化测试注入，以保证可重复，不改动正式协议路径。
+## 目录与源代码
 
-## 文件结构
+```text
+app.py                  统一侧栏与页面路由
+cash_app.py             原隐币实验室电子现金页面
+cloud_app.py            保持原线上入口，运行统一app.py
+ecash/                  原电子现金协议及SQLite实现
+p2p/app.py              P2P实验页面
+p2p/lab/                TCP网络、发现、同步与Bitcoin Script验证
+p2p/results/            原始实测CSV、公开区块、统计与图表
+p2p/tools/              P2P批量复测、统计和独立夹具校验
+tests/                  电子现金及跨实验导航回归测试
+p2p/tests/              P2P协议、网络和页面测试
+validation/             整合版实际测试输出
+docs/upstream.json      原站源码对应GitHub树及文件校验记录
+requirements.txt        两个实验共同的安装清单
+```
 
-- `app.py`：三角色界面、引导、余额和证据展示。
-- `ecash/crypto.py`：RSA 教学盲签、带盐承诺、输入验证、纯离线验签和响应验证、互补分片恢复。
-- `ecash/bank.py`：账户、预扣取款、抽查签发、原子清算和证据。
-- `ecash/actors.py`：付款人钱包与不依赖 Bank 的商户终端。
-- `ecash/storage.py`：事务、SQLite连接管理。
-- `tests/`：正常、攻击、边界和并发验收。
-- `docs/DESIGN.md`：协议、状态、数据库和安全边界。
-- `docs/REPORT_MATERIALS.md`：对应上传DOC模板的报告素材及截图清单。
+交作业的源代码是上述 `.py` 文件及目录，不是终端登录提示。压缩包不包括虚拟环境、运行数据库、私钥或实验报告。
 
-公开部署副本的 `app.py` 与 `cloud_app.py` 默认均使用访客独立在线模式；`cloud_app.py` 始终强制在线模式。通过 `start.command` 或显式设置 `ECASH_DATA=data` 运行 `app.py`，即可使用本地持久模式。本地数据位于指定目录，首次运行建立三个逻辑区域：`bank.db`、`wallets/<账户>.db`、`merchants/<商户>.db`。关停程序后换一个空目录即可开始新实验；请勿只删除银行数据库而保留旧钱包。
+## 测试与复测
 
-## 补充
+```bash
+python -m unittest discover -s tests -v
+PYTHONPATH=p2p python -m unittest discover -s p2p/tests -v
+python tests/ui_flow.py
+python p2p/tools/validate_fixtures.py
+```
 
+第二行的 `PYTHONPATH=p2p` 是 macOS/Linux 写法；Windows PowerShell 可先执行 `$env:PYTHONPATH="p2p"` 再执行 Python 命令。核心测试和页面导航测试分别覆盖电子现金与P2P，并检查跨页面切换不会重置钱包或混用状态。
 
-已安装Streamlit后，也可运行页面端到端测试：`python tests/ui_flow.py`。它使用临时数据库模拟真实组件点击，涵盖正常支付与第二商户双花存款，不改变演示数据。切换角色后需重新输入相应账户密码；查看第二商户时请选择shop_b。
+批量P2P复测：进入 `p2p` 目录，运行 `python tools/run_experiments.py --output results_rerun`，再运行 `python tools/analyze.py --input results_rerun`。本次沿用已交付的360次同步、12次发现、24次负载测量，不将页面整合描述为新一轮批量测量。详细模型、指标和安全边界见 `p2p/README.md`。
+
+## 线上更新
+
+整合版保留原仓库的 `app.py`、`cloud_app.py` 和根目录 `requirements.txt` 位置。原 Streamlit 应用无论使用哪个入口均运行统一工作台；新增依赖由平台安装。仅上传源码和公开数据，不上传 `.venv`、`tmp`、数据库或本地配置凭据。
+
+本版本用于更新原 `Yang-yaping/ZY` 项目。源码更新会触发已连接的Streamlit应用重新部署；线上构建状态与可用性需以实际网页验证为准。P2P演示会临时创建101个本机TCP监听；云主机若限制套接字或资源，页面会显示真实失败，不用预录数据冒充实时实验。

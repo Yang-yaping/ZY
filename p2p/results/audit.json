@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "matrix_runs": 360,
+  "matrix_successful": 360,
+  "matrix_groups": 120,
+  "discovery_runs": 12,
+  "load_runs": 24,
+  "completed_load_clients": 74,
+  "offered_load_clients": 96,
+  "source_unchanged_during_run": true,
+  "all_checks": "matrix completeness, no duplicate keys, success, heights, UTXOs, recomputed rates, active peers, lifecycle"
+}

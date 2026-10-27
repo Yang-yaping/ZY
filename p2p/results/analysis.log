@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "matrix_runs": 360,
+  "matrix_successful": 360,
+  "matrix_groups": 120,
+  "discovery_runs": 12,
+  "load_runs": 24,
+  "completed_load_clients": 74,
+  "offered_load_clients": 96,
+  "source_unchanged_during_run": true,
+  "all_checks": "matrix completeness, no duplicate keys, success, heights, UTXOs, recomputed rates, active peers, lifecycle"
+}
+     profile  block_bytes  baseline  optimized  speedup
+   congested        65536  0.566090   0.421609 1.342689
+   congested       262144  1.644736   1.494886 1.100241
+   congested      1048576  5.950190   5.836102 1.019549
+  disconnect        65536  0.225672   0.070602 3.196386
+  disconnect       262144  0.461959   0.239322 1.930278
+  disconnect      1048576  1.311330   0.803172 1.632690
+      normal        65536  0.111662   0.071503 1.561649
+      normal       262144  0.276195   0.231723 1.191918
+      normal      1048576  0.847108   0.836050 1.013226
+  overloaded        65536  0.166346   0.130835 1.271418
+  overloaded       262144  0.322216   0.296870 1.085377
+  overloaded      1048576  0.895241   0.903465 0.990898
+unresponsive        65536  0.423907   0.188571 2.247999
+unresponsive       262144  0.575860   0.241082 2.388646
+unresponsive      1048576  1.155633   0.844559 1.368327
+  profile  concurrency   mean_s    std_s  mean_probes  active
+congested            1 1.786616 0.048410        100.0     100
+congested            8 0.283897 0.012099        100.0     100
+   normal            1 0.285485 0.006667        100.0     100
+   normal            8 0.052115 0.007934        100.0     100
+  profile  workers_per_client   mean_s    std_s  throughput       busy    retries  queue_p95_ms  completed
+congested                   1 1.207098 0.253513    1.655177  60.333333  60.333333      9.225111   2.666667
+congested                   2 0.920067 0.005152    1.630350 151.333333 151.333333      9.250070   2.000000
+congested                   4 0.959353 0.005991    1.563594 239.666667 239.666667      9.317597   2.000000
+congested                   8 0.979157 0.001568    1.531933 240.000000 240.000000      9.361264   2.000000
+   normal                   1 0.287920 0.002843   10.420242  23.333333  23.333333      1.350319   4.000000
+   normal                   2 0.289954 0.001562   10.346685  41.000000  41.000000      1.226778   4.000000
+   normal                   4 0.367238 0.000746    8.169112  80.000000  80.000000      1.450750   4.000000
+   normal                   8 0.366691 0.005783    8.182626  80.000000  80.000000      1.354389   4.000000

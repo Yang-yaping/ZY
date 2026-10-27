@@ -1,0 +1,1423 @@
+{
+  "nodes_including_newcomer": 101,
+  "before": {
+    "elapsed_s": 0.06821804190985858,
+    "probes": 100,
+    "active": 100,
+    "concurrency": 8
+  },
+  "after_one_round": [
+    {
+      "id": 0,
+      "port": 54278,
+      "failures": 1,
+      "rtt_ms": 4.052709089592099,
+      "active": true
+    },
+    {
+      "id": 1,
+      "port": 54279,
+      "failures": 1,
+      "rtt_ms": 5.200499901548028,
+      "active": true
+    },
+    {
+      "id": 2,
+      "port": 54280,
+      "failures": 1,
+      "rtt_ms": 4.608874907717109,
+      "active": true
+    },
+    {
+      "id": 3,
+      "port": 54281,
+      "failures": 1,
+      "rtt_ms": 4.541292088106275,
+      "active": true
+    },
+    {
+      "id": 4,
+      "port": 54282,
+      "failures": 1,
+      "rtt_ms": 4.474999848753214,
+      "active": true
+    },
+    {
+      "id": 5,
+      "port": 54283,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 6,
+      "port": 54284,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 7,
+      "port": 54285,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 8,
+      "port": 54286,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 9,
+      "port": 54287,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 10,
+      "port": 54288,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 11,
+      "port": 54289,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 12,
+      "port": 54290,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 13,
+      "port": 54291,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 14,
+      "port": 54292,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 15,
+      "port": 54293,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 16,
+      "port": 54294,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 17,
+      "port": 54295,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 18,
+      "port": 54296,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 19,
+      "port": 54297,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 20,
+      "port": 54298,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 21,
+      "port": 54299,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 22,
+      "port": 54300,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 23,
+      "port": 54301,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 24,
+      "port": 54302,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 25,
+      "port": 54303,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 26,
+      "port": 54304,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 27,
+      "port": 54305,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 28,
+      "port": 54306,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 29,
+      "port": 54307,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 30,
+      "port": 54308,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 31,
+      "port": 54309,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 32,
+      "port": 54310,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 33,
+      "port": 54311,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 34,
+      "port": 54312,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 35,
+      "port": 54313,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 36,
+      "port": 54314,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 37,
+      "port": 54315,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 38,
+      "port": 54316,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 39,
+      "port": 54317,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 40,
+      "port": 54318,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 41,
+      "port": 54319,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 42,
+      "port": 54320,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 43,
+      "port": 54321,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 44,
+      "port": 54322,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 45,
+      "port": 54323,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 46,
+      "port": 54324,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 47,
+      "port": 54325,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 48,
+      "port": 54326,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 49,
+      "port": 54327,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 50,
+      "port": 54328,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 51,
+      "port": 54329,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 52,
+      "port": 54330,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 53,
+      "port": 54331,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 54,
+      "port": 54332,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 55,
+      "port": 54333,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 56,
+      "port": 54334,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 57,
+      "port": 54335,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 58,
+      "port": 54336,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 59,
+      "port": 54337,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 60,
+      "port": 54338,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 61,
+      "port": 54339,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 62,
+      "port": 54340,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 63,
+      "port": 54341,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 64,
+      "port": 54342,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 65,
+      "port": 54343,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 66,
+      "port": 54344,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 67,
+      "port": 54345,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 68,
+      "port": 54346,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 69,
+      "port": 54347,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 70,
+      "port": 54348,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 71,
+      "port": 54349,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 72,
+      "port": 54350,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 73,
+      "port": 54351,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 74,
+      "port": 54352,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 75,
+      "port": 54353,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 76,
+      "port": 54354,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 77,
+      "port": 54355,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 78,
+      "port": 54356,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 79,
+      "port": 54357,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 80,
+      "port": 54358,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 81,
+      "port": 54359,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 82,
+      "port": 54360,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 83,
+      "port": 54361,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 84,
+      "port": 54362,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 85,
+      "port": 54363,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 86,
+      "port": 54364,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 87,
+      "port": 54365,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 88,
+      "port": 54366,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 89,
+      "port": 54367,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 90,
+      "port": 54368,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 91,
+      "port": 54369,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 92,
+      "port": 54370,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 93,
+      "port": 54371,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 94,
+      "port": 54372,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 95,
+      "port": 54373,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 96,
+      "port": 54374,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 97,
+      "port": 54375,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 98,
+      "port": 54376,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 99,
+      "port": 54377,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    }
+  ],
+  "after_two_rounds": [
+    {
+      "id": 0,
+      "port": 54278,
+      "failures": 2,
+      "rtt_ms": 4.052709089592099,
+      "active": false
+    },
+    {
+      "id": 1,
+      "port": 54279,
+      "failures": 2,
+      "rtt_ms": 5.200499901548028,
+      "active": false
+    },
+    {
+      "id": 2,
+      "port": 54280,
+      "failures": 2,
+      "rtt_ms": 4.608874907717109,
+      "active": false
+    },
+    {
+      "id": 3,
+      "port": 54281,
+      "failures": 2,
+      "rtt_ms": 4.541292088106275,
+      "active": false
+    },
+    {
+      "id": 4,
+      "port": 54282,
+      "failures": 2,
+      "rtt_ms": 4.474999848753214,
+      "active": false
+    },
+    {
+      "id": 5,
+      "port": 54283,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 6,
+      "port": 54284,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 7,
+      "port": 54285,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 8,
+      "port": 54286,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 9,
+      "port": 54287,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 10,
+      "port": 54288,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 11,
+      "port": 54289,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 12,
+      "port": 54290,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 13,
+      "port": 54291,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 14,
+      "port": 54292,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 15,
+      "port": 54293,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 16,
+      "port": 54294,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 17,
+      "port": 54295,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 18,
+      "port": 54296,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 19,
+      "port": 54297,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 20,
+      "port": 54298,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 21,
+      "port": 54299,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 22,
+      "port": 54300,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 23,
+      "port": 54301,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 24,
+      "port": 54302,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 25,
+      "port": 54303,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 26,
+      "port": 54304,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 27,
+      "port": 54305,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 28,
+      "port": 54306,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 29,
+      "port": 54307,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 30,
+      "port": 54308,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 31,
+      "port": 54309,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 32,
+      "port": 54310,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 33,
+      "port": 54311,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 34,
+      "port": 54312,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 35,
+      "port": 54313,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 36,
+      "port": 54314,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 37,
+      "port": 54315,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 38,
+      "port": 54316,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 39,
+      "port": 54317,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 40,
+      "port": 54318,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 41,
+      "port": 54319,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 42,
+      "port": 54320,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 43,
+      "port": 54321,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 44,
+      "port": 54322,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 45,
+      "port": 54323,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 46,
+      "port": 54324,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 47,
+      "port": 54325,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 48,
+      "port": 54326,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 49,
+      "port": 54327,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 50,
+      "port": 54328,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 51,
+      "port": 54329,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 52,
+      "port": 54330,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 53,
+      "port": 54331,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 54,
+      "port": 54332,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 55,
+      "port": 54333,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 56,
+      "port": 54334,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 57,
+      "port": 54335,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 58,
+      "port": 54336,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 59,
+      "port": 54337,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 60,
+      "port": 54338,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 61,
+      "port": 54339,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 62,
+      "port": 54340,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 63,
+      "port": 54341,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 64,
+      "port": 54342,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 65,
+      "port": 54343,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 66,
+      "port": 54344,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 67,
+      "port": 54345,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 68,
+      "port": 54346,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 69,
+      "port": 54347,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 70,
+      "port": 54348,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 71,
+      "port": 54349,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 72,
+      "port": 54350,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 73,
+      "port": 54351,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 74,
+      "port": 54352,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 75,
+      "port": 54353,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 76,
+      "port": 54354,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 77,
+      "port": 54355,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 78,
+      "port": 54356,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 79,
+      "port": 54357,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 80,
+      "port": 54358,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 81,
+      "port": 54359,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 82,
+      "port": 54360,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 83,
+      "port": 54361,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 84,
+      "port": 54362,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 85,
+      "port": 54363,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 86,
+      "port": 54364,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 87,
+      "port": 54365,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 88,
+      "port": 54366,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 89,
+      "port": 54367,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 90,
+      "port": 54368,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 91,
+      "port": 54369,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 92,
+      "port": 54370,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 93,
+      "port": 54371,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 94,
+      "port": 54372,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 95,
+      "port": 54373,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 96,
+      "port": 54374,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 97,
+      "port": 54375,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 98,
+      "port": 54376,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    },
+    {
+      "id": 99,
+      "port": 54377,
+      "failures": 0,
+      "rtt_ms": 0.0,
+      "active": true
+    }
+  ],
+  "active_after_two": 95,
+  "offline_ids": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "failure_threshold": 2,
+  "ttl_s": 30.0
+}

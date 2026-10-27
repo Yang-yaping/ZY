@@ -1,0 +1,4 @@
+python-bitcoinlib==0.12.2
+streamlit>=1.50,<2
+matplotlib>=3.9,<4
+pandas>=2.2,<3
