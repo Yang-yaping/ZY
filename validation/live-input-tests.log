@@ -1,0 +1,12 @@
+✔ one move per trackpad momentum gesture and a new move after quiet (0.552125ms)
+✔ animation-period wheel events cannot become a queued extra screen (0.065958ms)
+✔ direction reversal resets accumulated delta and bounds prevent wrapping (0.055ms)
+✔ wheel line and page units normalize without treating horizontal motion as vertical (0.35575ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 54.818833

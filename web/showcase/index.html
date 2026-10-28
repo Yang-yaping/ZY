@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <title>隐币实验室 · 课程作业</title>
+  <style>__STYLES__</style>
+</head>
+<body>
+  <a class="skip-link" href="#stage">跳至页面内容</a>
+  <header class="navbar">
+    <button class="brand" data-goto="0" aria-label="隐币实验室，回到首页">
+      <svg viewBox="0 0 66 34" aria-hidden="true"><path d="M2 23C12 23 11 5 20 5s11 25 21 25S52 12 64 12M2 27C13 27 14 13 24 13s12 13 21 13S55 4 64 4"/></svg>
+      <span>隐币实验室</span>
+    </button>
+    <nav aria-label="主要页面" class="main-nav">
+      <button data-goto="0" aria-current="page">首页</button>
+      <button data-goto="1">线上银行</button>
+      <button data-goto="2">节点模拟器</button>
+      <button data-goto="3">课程作业</button>
+      <span class="nav-underline" aria-hidden="true"></span>
+    </nav>
+    <a class="nav-action" id="nav-action" href="./bank" target="_blank" rel="noopener noreferrer">进入实验 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="stage" class="stage" tabindex="-1" aria-label="四屏课程展示">
+    <div id="scene-list" class="scene-list"></div>
+    <div id="loading" class="loading" role="status"><span></span>正在载入原图</div>
+  </main>
+  <aside class="screen-dots" aria-label="选择页面">
+    <button data-goto="0" aria-label="第1屏：首页" aria-current="page"><span>01</span></button>
+    <button data-goto="1" aria-label="第2屏：线上银行"><span>02</span></button>
+    <button data-goto="2" aria-label="第3屏：节点模拟器"><span>03</span></button>
+    <button data-goto="3" aria-label="第4屏：课程作业"><span>04</span></button>
+  </aside>
+  <footer class="screen-footer">
+    <div class="scroll-hint"><span class="scroll-line" aria-hidden="true"></span><span id="scroll-label">滚动探索</span></div>
+    <div class="screen-counter"><span id="screen-number">01</span><span class="counter-rule"></span><span>04</span></div>
+    <div class="step-buttons"><button id="previous" aria-label="上一屏">↑</button><button id="next" aria-label="下一屏">↓</button></div>
+  </footer>
+  <div id="announcement" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="image-dialog" aria-labelledby="image-dialog-title">
+    <div class="dialog-toolbar"><h2 id="image-dialog-title">原始页面设计图</h2><button id="close-dialog" aria-label="关闭原图">关闭 ×</button></div>
+    <div class="image-scroll" data-native-scroll><img id="full-image" alt=""></div>
+  </dialog>
+  <noscript>请启用 JavaScript 浏览全屏展示。<a href="./bank" target="_blank" rel="noopener noreferrer">线上银行</a> · <a href="./p2p" target="_blank" rel="noopener noreferrer">节点模拟器</a></noscript>
+  <script id="scene-config" type="application/json">__CONFIG__</script>
+  <script>__MOTION_CORE__</script>
+  <script>__CONTROLLER__</script>
+</body>
+</html>

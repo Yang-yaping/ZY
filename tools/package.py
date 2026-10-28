@@ -21,7 +21,7 @@ manifest.write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.r
 files.append(manifest)
 output=ROOT/'deliverables'
 output.mkdir(exist_ok=True)
-target=output/'隐币实验室整合版_待确认.zip'
+target=output/'隐币实验室_可操作新版_待确认.zip'
 with zipfile.ZipFile(target,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
     for p in files:
         z.write(p,(Path(ROOT.name)/p.relative_to(ROOT)).as_posix())

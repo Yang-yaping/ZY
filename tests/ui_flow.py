@@ -8,7 +8,8 @@ with tempfile.TemporaryDirectory() as tmp:
  os.environ['ECASH_DATA']=tmp
  b=Bank(Path(tmp)/'bank.db'); b.initialize()
  for name,kind in [('alice','payer'),('shop_a','merchant'),('shop_b','merchant')]:b.create_account(name,'password123',kind)
- at=AppTest.from_file(str(root/'app.py'),default_timeout=30).run()
+ # Legacy console regression only; the public site uses the live component.
+ at=AppTest.from_file(str(root/'cash_app.py'),default_timeout=30).run()
  def check():
   assert not at.exception, str(at.exception)
  def button(label):

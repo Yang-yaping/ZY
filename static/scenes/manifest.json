@@ -1,0 +1,30 @@
+{
+  "home": {
+    "file": "home.png",
+    "width": 1512,
+    "height": 1040,
+    "sha256": "dc0ee537c91936448c143803abedd1e619e06e112a95de9e4643616c801b6e49",
+    "source_name": "exec-64fd1226-5a6a-474b-b0bc-a41136a69df8.png"
+  },
+  "bank": {
+    "file": "bank.png",
+    "width": 1513,
+    "height": 1040,
+    "sha256": "c6c9f764ca4cf50b96991be42f758b063054dc4da377130930c52d5bf787bae8",
+    "source_name": "exec-c1c32458-50c6-4915-930d-e789a478c0ee.png"
+  },
+  "nodes": {
+    "file": "nodes.png",
+    "width": 1513,
+    "height": 1040,
+    "sha256": "311cd468f0f24cdc42c6314d7f33198c300692006ddf63d69f6530e19d43f522",
+    "source_name": "exec-54e56882-42a9-480c-9fcd-015dd02648fd.png"
+  },
+  "coursework": {
+    "file": "coursework.png",
+    "width": 1512,
+    "height": 1040,
+    "sha256": "4c0af3822126765daadbde18d320b5b7b710047c1539d61af11f258d23ddb4d5",
+    "source_name": "exec-80a69a3e-9d25-4ee4-a32f-ef0eec4acf41.png"
+  }
+}

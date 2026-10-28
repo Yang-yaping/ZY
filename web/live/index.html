@@ -1,0 +1,21 @@
+<div id="live-app" tabindex="-1" aria-label="隐币实验室交互网站">
+  <header class="navbar">
+    <button class="brand" data-goto="0" aria-label="隐币实验室，回到首页"><svg viewBox="0 0 66 34" aria-hidden="true"><path d="M2 23C12 23 11 5 20 5s11 25 21 25S52 12 64 12M2 27C13 27 14 13 24 13s12 13 21 13S55 4 64 4"/></svg><span>隐币实验室</span></button>
+    <nav class="main-nav" aria-label="主要页面"><button data-goto="0">首页</button><button data-goto="1">线上银行</button><button data-goto="2">节点模拟器</button><button data-goto="3">课程作业</button><i class="nav-underline"></i></nav>
+    <span class="live-mark"><i></i> 可交互教学实验</span>
+  </header>
+  <main id="stage" class="stage">
+    <section class="scene home" aria-label="首页" data-scene="home">
+      <div class="home-visual"><img class="home-image" alt="课程作业，青绿色玻璃风格首页"><div class="home-caption"><span>课程作业</span><small>教师题目 · 我的回答</small></div></div>
+      <div class="home-mobile"><small>作业实时更新</small><h1>课程作业</h1><p>《密码货币与区块链技术》杨雅评课程作业</p></div>
+      <button class="home-explore" data-goto="1" aria-label="开始探索线上银行"></button>
+      <div class="home-entries"><button data-goto="1" aria-label="打开线上银行"><span>01</span><strong>线上银行</strong><small>盲签发行 · 离线支付 · 双花追踪</small><b>↗</b></button><button data-goto="2" aria-label="打开节点模拟器"><span>02</span><strong>节点模拟器</strong><small>节点发现 · 区块同步 · 网络异常</small><b>↗</b></button><button data-goto="3" aria-label="打开课程作业"><span>03</span><strong>课程作业</strong><small>教师题目 · 我的回答</small><b>↗</b></button></div>
+    </section>
+    <section class="scene work" aria-label="线上银行" data-scene="bank"><div class="work-shell"><div class="work-hero"><div class="hero-art"><img data-asset="bank.png" alt="青绿色玻璃货币视觉"></div><div class="hero-copy"><small>OFFLINE CASH / TEACHING BANK</small><h1>线上银行</h1><p>盲签发行 · 离线支付 · 双花追踪</p><span class="fine">2048 位 RSA · 每位访客独立实验 · 无真实资金</span></div></div><div class="tabbar" id="bank-tabs"></div><div class="work-body" id="bank-body" data-scroll></div></div></section>
+    <section class="scene work" aria-label="节点模拟器" data-scene="nodes"><div class="work-shell"><div class="work-hero"><div class="hero-art"><img data-asset="nodes.png" alt="青绿色玻璃节点网络视觉"></div><div class="hero-copy"><small>P2P / NETWORK SIMULATION</small><h1>节点模拟器</h1><p>连接100个节点，看见区块如何同步。</p><span class="fine">本机 TCP 实际传输 · Bitcoin Script · SHA-256 · Merkle Tree</span></div></div><div class="tabbar" id="node-tabs"></div><div class="work-body" id="node-body" data-scroll></div></div></section>
+    <section class="scene work" aria-label="课程作业" data-scene="coursework"><div class="work-shell"><div class="work-hero compact"><div class="hero-art"><img data-asset="coursework.png" alt="青绿色玻璃对话视觉"></div><div class="hero-copy"><small>COURSEWORK / ASSIGNMENTS</small><h1>课程作业</h1><p>教师题目与我的回答</p></div></div><div class="work-body" id="course-body" data-scroll></div></div></section>
+  </main>
+  <aside class="screen-dots" aria-label="选择页面"><button data-goto="0" aria-label="第1屏：首页"></button><button data-goto="1" aria-label="第2屏：线上银行"></button><button data-goto="2" aria-label="第3屏：节点模拟器"></button><button data-goto="3" aria-label="第4屏：课程作业"></button></aside>
+  <footer class="screen-footer"><span class="scroll-line"></span><span id="screen-hint">滚动探索</span><span id="screen-counter">01 / 04</span><button id="previous" aria-label="上一屏">↑</button><button id="next" aria-label="下一屏">↓</button></footer>
+  <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+</div>

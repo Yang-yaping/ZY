@@ -1,0 +1,38 @@
+2026-10-28 09:15:25.986 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+test_account_controls_and_cancellation (test_live_lab.LiveTests.test_account_controls_and_cancellation) ... ok
+test_actual_p2p_counts_and_saved_answer (test_live_lab.LiveTests.test_actual_p2p_counts_and_saved_answer) ... ok
+test_event_replay_and_invalid_input (test_live_lab.LiveTests.test_event_replay_and_invalid_input) ... ok
+test_forgery_and_no_private_material_in_snapshot (test_live_lab.LiveTests.test_forgery_and_no_private_material_in_snapshot) ... ok
+test_identical_challenge_boundary_and_wallet_guard (test_live_lab.LiveTests.test_identical_challenge_boundary_and_wallet_guard) ... ok
+test_live_legal_payment_and_double_spend_recovery (test_live_lab.LiveTests.test_live_legal_payment_and_double_spend_recovery) ... ok
+test_teacher_question_entry_answer_and_no_source_mutation (test_live_lab.LiveTests.test_teacher_question_entry_answer_and_no_source_mutation) ... ok
+test_live_routes_preserve_wallet_and_node_result (test_navigation.NavigationTests.test_live_routes_preserve_wallet_and_node_result) ... 2026-10-28 09:15:28.192 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-28 09:15:29.158 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_atomic_concurrent (test_protocol.Tests.test_atomic_concurrent) ... ok
+test_cancel_owner_balance (test_protocol.Tests.test_cancel_owner_balance) ... ok
+test_cut_choose_failure_refund (test_protocol.Tests.test_cut_choose_failure_refund) ... ok
+test_cut_choose_probability (test_protocol.Tests.test_cut_choose_probability) ... ok
+test_double_spend (test_protocol.Tests.test_double_spend) ... ok
+test_equal_challenge_boundary (test_protocol.Tests.test_equal_challenge_boundary) ... ok
+test_forgery (test_protocol.Tests.test_forgery) ... ok
+test_frozen_and_no_reuse (test_protocol.Tests.test_frozen_and_no_reuse) ... ok
+test_invalid_and_retry (test_protocol.Tests.test_invalid_and_retry) ... ok
+test_legal_anonymous_offline (test_protocol.Tests.test_legal_anonymous_offline) ... ok
+test_persisted_terminal_and_challenge (test_protocol.Tests.test_persisted_terminal_and_challenge) ... ok
+test_random_freshness (test_protocol.Tests.test_random_freshness) ... ok
+test_response_and_guard (test_protocol.Tests.test_response_and_guard) ... ok
+test_two_merchants_concurrent (test_protocol.Tests.test_two_merchants_concurrent) ... ok
+test_untrusted_workspace_cannot_escape_directory (test_runtime.RuntimeTests.test_untrusted_workspace_cannot_escape_directory) ... ok
+test_visitors_get_distinct_workspaces (test_runtime.RuntimeTests.test_visitors_get_distinct_workspaces) ... ok
+test_workspace_is_stable_within_session (test_runtime.RuntimeTests.test_workspace_is_stable_within_session) ... ok
+test_four_original_assets_and_approved_titles (test_showcase.ShowcaseTests.test_four_original_assets_and_approved_titles) ... 2026-10-28 09:15:31.912 No runtime found, using MemoryCacheStorageManager
+ok
+test_question_order_duplicate_validation_and_no_invented_questions (test_showcase.ShowcaseTests.test_question_order_duplicate_validation_and_no_invented_questions) ... ok
+test_streamlit_visual_entrypoint_and_coursework_empty_state (test_showcase.ShowcaseTests.test_streamlit_visual_entrypoint_and_coursework_empty_state) ... 2026-10-28 09:15:31.914 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 6.092s
+
+OK

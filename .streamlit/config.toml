@@ -3,6 +3,7 @@ gatherUsageStats = false
 
 [server]
 maxUploadSize = 1
+enableStaticServing = true
 
 [theme]
 base = "light"

@@ -1,4 +1,4 @@
-"""Shared entrypoint for two independent teaching experiments."""
+"""All public routes run the same live, session-bound designed interface."""
 import sys
 from pathlib import Path
 
@@ -13,8 +13,10 @@ if str(PROJECT/'p2p') not in sys.path:
 st.set_page_config(page_title='隐币实验室',page_icon='◈',layout='wide')
 st.sidebar.title('◈ 隐币实验室')
 st.sidebar.caption('密码学与区块链 · 课程实验工作台')
-navigation = st.navigation({'实验项目':[
-    st.Page('cash_app.py',title='离线电子现金',icon='💵',default=True,url_path='cash'),
-    st.Page('p2p/app.py',title='P2P 网络与区块同步',icon='🔗',url_path='p2p'),
+navigation = st.navigation({'课程页面':[
+    st.Page('showcase.py',title='全屏首页',icon='🏠',default=True),
+    st.Page('bank_page.py',title='线上银行',icon='💵',url_path='bank'),
+    st.Page('node_page.py',title='节点模拟器',icon='🔗',url_path='p2p'),
+    st.Page('coursework_page.py',title='课程作业',icon='📖',url_path='coursework'),
 ]})
 navigation.run()
