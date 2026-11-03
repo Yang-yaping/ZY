@@ -1,0 +1,1260 @@
+{
+  "time_utc": "2026-11-03T07:18:22.756452+00:00",
+  "python": "3.12.14",
+  "platform": "Darwin arm64",
+  "power_measured": false,
+  "runs": [
+    {
+      "algorithm": "SM3 + SM2/SM3",
+      "model": "同机线程竞争PoW，不是多台物理矿机或比特币主网",
+      "nodes": 1,
+      "difficulty": 12,
+      "rounds": 3,
+      "repetitions": 3,
+      "rows": [
+        {
+          "nodes": 1,
+          "repeat": 1,
+          "height": 1,
+          "success": true,
+          "hashes": 5726,
+          "elapsed_s": 0.015557666076347232,
+          "cpu_s": 0.01555100000000001,
+          "hashes_per_s": 368050.0643155854,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 5726
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 1,
+          "repeat": 1,
+          "height": 2,
+          "success": true,
+          "hashes": 13395,
+          "elapsed_s": 0.03855950012803078,
+          "cpu_s": 0.03806700000000002,
+          "hashes_per_s": 347385.2087170218,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 13395
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 1,
+          "repeat": 1,
+          "height": 3,
+          "success": true,
+          "hashes": 5600,
+          "elapsed_s": 0.014801665907725692,
+          "cpu_s": 0.01480200000000001,
+          "hashes_per_s": 378335.7923973338,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 5600
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 1,
+          "repeat": 2,
+          "height": 1,
+          "success": true,
+          "hashes": 12197,
+          "elapsed_s": 0.03293820796534419,
+          "cpu_s": 0.032861,
+          "hashes_per_s": 370299.4410877795,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 12197
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 1,
+          "repeat": 2,
+          "height": 2,
+          "success": true,
+          "hashes": 946,
+          "elapsed_s": 0.00270491698756814,
+          "cpu_s": 0.002711000000000019,
+          "hashes_per_s": 349733.46847531275,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 946
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 1,
+          "repeat": 2,
+          "height": 3,
+          "success": true,
+          "hashes": 12058,
+          "elapsed_s": 0.03295279201120138,
+          "cpu_s": 0.032920000000000005,
+          "hashes_per_s": 365917.4007441075,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 12058
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 1,
+          "repeat": 3,
+          "height": 1,
+          "success": true,
+          "hashes": 5292,
+          "elapsed_s": 0.014086624840274453,
+          "cpu_s": 0.014099000000000028,
+          "hashes_per_s": 375675.51205522806,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 5292
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 1,
+          "repeat": 3,
+          "height": 2,
+          "success": true,
+          "hashes": 3934,
+          "elapsed_s": 0.010428125038743019,
+          "cpu_s": 0.010429999999999995,
+          "hashes_per_s": 377249.0246697497,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 3934
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 1,
+          "repeat": 3,
+          "height": 3,
+          "success": true,
+          "hashes": 1857,
+          "elapsed_s": 0.005024082958698273,
+          "cpu_s": 0.005031999999999981,
+          "hashes_per_s": 369619.6928406501,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 1857
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        }
+      ],
+      "summary": {
+        "successes": 9,
+        "mean_hashes": 6778.333333333333,
+        "mean_elapsed_s": 0.018561509101548128,
+        "mean_cpu_s": 0.018497000000000006
+      },
+      "sample": {
+        "header": {
+          "previous": "0001534bf42a1e5c943ed85f34b7ea25b0b909efc9e71243ff5b758bd0bf4fd8",
+          "height": 3,
+          "merkle": "0963f30da70322f7da478c4dd1f63d86ac97eb4c647f7ffadc44a9769eba0b5b",
+          "difficulty": 12,
+          "miner": 0,
+          "salt": "456ded17d57e732b7f26b2580e103d79",
+          "nonce": 1856
+        },
+        "hash": "0008011f059f7c26bbac15a544c13a93536efc806961d847533fe6ad2bbfeb97",
+        "transaction": {
+          "body": {
+            "from": "504509d59291124b6910d9bfa4a393d3b6ad1ab15f25faa4b27ca4b439851673551cb3289e260e425bc7ef385a18be3df1b72cdde3e9bb1c18475d3c4aadfc8e",
+            "to": "classroom-recipient",
+            "amount": 1,
+            "nonce": "8ba59388a7fd65bfcc1a9a8e1845ec2e"
+          },
+          "public": "504509d59291124b6910d9bfa4a393d3b6ad1ab15f25faa4b27ca4b439851673551cb3289e260e425bc7ef385a18be3df1b72cdde3e9bb1c18475d3c4aadfc8e",
+          "signature": "b39736d817c88e08450e8c936fe17e3312306c69ff4c3b11b14eed3b9fc26e18331629bacf9aecd74f43af621b42119d3b65b62d892017e91d78630fd5bb19a7"
+        },
+        "miner_public": "6a4441f13aafb5fe3d69dbe2d55510d299748a8eda82100abfcd374f286c3f739591675b8cb7c0d368637408b54fef6c06433d0793f1582420db81500f1934fa",
+        "signature": "dfcc088b3cdde10ea1e719afc6ee7f4c1ee40a8f28e666ef8468ad612f0010ace171e0ddf65b2c2304a97300eb433c7b4017f26e1c445a08f5a22b635adf48ba"
+      },
+      "total_wall_s": 0.4034206250216812,
+      "total_cpu_s": 0.39947,
+      "boundary": "随机PoW有方差；同机节点数不等于独立算力。CPU秒不是功率。功率与能耗仅在输入外部实测整机功率时计算。"
+    },
+    {
+      "algorithm": "SM3 + SM2/SM3",
+      "model": "同机线程竞争PoW，不是多台物理矿机或比特币主网",
+      "nodes": 2,
+      "difficulty": 12,
+      "rounds": 3,
+      "repetitions": 3,
+      "rows": [
+        {
+          "nodes": 2,
+          "repeat": 1,
+          "height": 1,
+          "success": true,
+          "hashes": 1826,
+          "elapsed_s": 0.005160541972145438,
+          "cpu_s": 0.00515199999999999,
+          "hashes_per_s": 353838.8041132162,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 1826
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 2,
+          "repeat": 1,
+          "height": 2,
+          "success": true,
+          "hashes": 69,
+          "elapsed_s": 0.00036058411933481693,
+          "cpu_s": 0.0003910000000000302,
+          "hashes_per_s": 191356.18098569312,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 0
+            },
+            {
+              "node": 1,
+              "attempts": 69
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 2,
+          "repeat": 1,
+          "height": 3,
+          "success": true,
+          "hashes": 3680,
+          "elapsed_s": 0.009848334128037095,
+          "cpu_s": 0.009890999999999983,
+          "hashes_per_s": 373667.2570362388,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 2364
+            },
+            {
+              "node": 1,
+              "attempts": 1316
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 2,
+          "repeat": 2,
+          "height": 1,
+          "success": true,
+          "hashes": 3634,
+          "elapsed_s": 0.016667333897203207,
+          "cpu_s": 0.014236999999999944,
+          "hashes_per_s": 218031.27137266917,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 2707
+            },
+            {
+              "node": 1,
+              "attempts": 927
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 2,
+          "repeat": 2,
+          "height": 2,
+          "success": true,
+          "hashes": 1017,
+          "elapsed_s": 0.003160333028063178,
+          "cpu_s": 0.0031410000000000604,
+          "hashes_per_s": 321801.528816497,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 1017
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 2,
+          "repeat": 2,
+          "height": 3,
+          "success": true,
+          "hashes": 5435,
+          "elapsed_s": 0.01503233308903873,
+          "cpu_s": 0.015073000000000003,
+          "hashes_per_s": 361553.9895109889,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 3093
+            },
+            {
+              "node": 1,
+              "attempts": 2342
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 2,
+          "repeat": 3,
+          "height": 1,
+          "success": true,
+          "hashes": 2414,
+          "elapsed_s": 0.006550207966938615,
+          "cpu_s": 0.0065950000000000175,
+          "hashes_per_s": 368537.91699200607,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 2374
+            },
+            {
+              "node": 1,
+              "attempts": 40
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 2,
+          "repeat": 3,
+          "height": 2,
+          "success": true,
+          "hashes": 5040,
+          "elapsed_s": 0.013373957946896553,
+          "cpu_s": 0.01342500000000002,
+          "hashes_per_s": 376851.79062265105,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 2659
+            },
+            {
+              "node": 1,
+              "attempts": 2381
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 2,
+          "repeat": 3,
+          "height": 3,
+          "success": true,
+          "hashes": 644,
+          "elapsed_s": 0.0018355830106884241,
+          "cpu_s": 0.0018650000000000055,
+          "hashes_per_s": 350842.2099409559,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 644
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        }
+      ],
+      "summary": {
+        "successes": 9,
+        "mean_hashes": 2639.8888888888887,
+        "mean_elapsed_s": 0.007998801017594006,
+        "mean_cpu_s": 0.007752222222222228
+      },
+      "sample": {
+        "header": {
+          "previous": "0002e3c53bdb568fe141f536eeb3ca7da10c0ac7e0350e1836a32a44ae413a94",
+          "height": 3,
+          "merkle": "02a8eae3a3400e38c07496ec3a3278da783dee522f46f7aecc45bb272ad7330b",
+          "difficulty": 12,
+          "miner": 0,
+          "salt": "9ab6d8671e12e478348a34d7dcc1dfbc",
+          "nonce": 643
+        },
+        "hash": "000c5a23308c116efa67904787fdef72521a21c80229ddfd0455b2e99d7dce93",
+        "transaction": {
+          "body": {
+            "from": "77f7d30206fc5974ae75acf0689803bc601ce8c9aa576d376dee13e59f6b10bec2eeb8d94c8493f449d32ddcda5d53011976d3982ac19dffd87ba27bc554fc9c",
+            "to": "classroom-recipient",
+            "amount": 1,
+            "nonce": "945eef6537b2b9a32318f05f642b3b9e"
+          },
+          "public": "77f7d30206fc5974ae75acf0689803bc601ce8c9aa576d376dee13e59f6b10bec2eeb8d94c8493f449d32ddcda5d53011976d3982ac19dffd87ba27bc554fc9c",
+          "signature": "42d127a94b98f90813b898636031e62f5fdbaa3631eab7bb28bd4565ea0f985b501d0ac76a6e46526a37c93d0b78f1c7cdb6ed377a85b7cfea0146a6a1696304"
+        },
+        "miner_public": "9ec4f5e861661f88cca79145fdc750a3a99616e0ad7b8a3e8e355e2b5555d1d3827fd7bd0a8c28044ede8c511c69c50c0b201d888ffa0a63b92a2554116ad101",
+        "signature": "75eb78cf0c6380c95709e3210ba4bc744393bd6fe110ce9a68b1f18834ae7e2fc87db7f671faa6755be42b63bfe9f76e77af1cf18606f36b3c44bd3263795253"
+      },
+      "total_wall_s": 0.31034599989652634,
+      "total_cpu_s": 0.305799,
+      "boundary": "随机PoW有方差；同机节点数不等于独立算力。CPU秒不是功率。功率与能耗仅在输入外部实测整机功率时计算。"
+    },
+    {
+      "algorithm": "SM3 + SM2/SM3",
+      "model": "同机线程竞争PoW，不是多台物理矿机或比特币主网",
+      "nodes": 4,
+      "difficulty": 12,
+      "rounds": 3,
+      "repetitions": 3,
+      "rows": [
+        {
+          "nodes": 4,
+          "repeat": 1,
+          "height": 1,
+          "success": true,
+          "hashes": 1417,
+          "elapsed_s": 0.004061582963913679,
+          "cpu_s": 0.004159000000000024,
+          "hashes_per_s": 348878.7530846349,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 1417
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 0
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 4,
+          "repeat": 1,
+          "height": 2,
+          "success": true,
+          "hashes": 834,
+          "elapsed_s": 0.002584083005785942,
+          "cpu_s": 0.002665999999999946,
+          "hashes_per_s": 322745.0504231543,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 0
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 834
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 4,
+          "repeat": 1,
+          "height": 3,
+          "success": true,
+          "hashes": 103,
+          "elapsed_s": 0.0007213328499346972,
+          "cpu_s": 0.0008509999999999351,
+          "hashes_per_s": 142791.2232325544,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 103
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 0
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 4,
+          "repeat": 2,
+          "height": 1,
+          "success": true,
+          "hashes": 16611,
+          "elapsed_s": 0.044265707954764366,
+          "cpu_s": 0.044399999999999995,
+          "hashes_per_s": 375256.62115186255,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 2366
+            },
+            {
+              "node": 1,
+              "attempts": 4282
+            },
+            {
+              "node": 2,
+              "attempts": 5219
+            },
+            {
+              "node": 3,
+              "attempts": 4744
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 4,
+          "repeat": 2,
+          "height": 2,
+          "success": true,
+          "hashes": 2925,
+          "elapsed_s": 0.008017915999516845,
+          "cpu_s": 0.008089000000000013,
+          "hashes_per_s": 364808.0124780877,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 0
+            },
+            {
+              "node": 1,
+              "attempts": 938
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 1987
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 4,
+          "repeat": 2,
+          "height": 3,
+          "success": true,
+          "hashes": 3036,
+          "elapsed_s": 0.008419416844844818,
+          "cpu_s": 0.008538000000000046,
+          "hashes_per_s": 360595.04547027306,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 0
+            },
+            {
+              "node": 1,
+              "attempts": 1024
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 2012
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 4,
+          "repeat": 3,
+          "height": 1,
+          "success": true,
+          "hashes": 7134,
+          "elapsed_s": 0.01921737496741116,
+          "cpu_s": 0.019328000000000123,
+          "hashes_per_s": 371226.55992807774,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 2367
+            },
+            {
+              "node": 1,
+              "attempts": 2334
+            },
+            {
+              "node": 2,
+              "attempts": 350
+            },
+            {
+              "node": 3,
+              "attempts": 2083
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 4,
+          "repeat": 3,
+          "height": 2,
+          "success": true,
+          "hashes": 6342,
+          "elapsed_s": 0.017388666048645973,
+          "cpu_s": 0.017440000000000122,
+          "hashes_per_s": 364720.32887731725,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 2340
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            },
+            {
+              "node": 2,
+              "attempts": 1661
+            },
+            {
+              "node": 3,
+              "attempts": 2341
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 4,
+          "repeat": 3,
+          "height": 3,
+          "success": true,
+          "hashes": 4661,
+          "elapsed_s": 0.013427832862362266,
+          "cpu_s": 0.013425999999999938,
+          "hashes_per_s": 347114.8358619071,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 2300
+            },
+            {
+              "node": 1,
+              "attempts": 112
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 2249
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        }
+      ],
+      "summary": {
+        "successes": 9,
+        "mean_hashes": 4784.777777777777,
+        "mean_elapsed_s": 0.013122657055242194,
+        "mean_cpu_s": 0.013210777777777793
+      },
+      "sample": {
+        "header": {
+          "previous": "000c60d7d41841ac0456a43921ca3d511bd0c1551c89b9828852a4e0f16a6993",
+          "height": 3,
+          "merkle": "5f4dc603f7b3521537cfbda98f8f5a38ad059e17181f2376acc8b591de1262cd",
+          "difficulty": 12,
+          "miner": 1,
+          "salt": "345cc1776195730feb4627045ba1cc01",
+          "nonce": 111
+        },
+        "hash": "0007df5a6b9ffbf40498e22a0d1e56a8fb3d2789b3dc5c5279f395d927ec7507",
+        "transaction": {
+          "body": {
+            "from": "f8d7f6a14863975c6b6f1f45a8991490bd66662d3ae97e09f58333d15f5bd65cabdfcb21d343d1a65af24883dbb60303927b4771b0ca2fb1c5f8d8f8c145a37c",
+            "to": "classroom-recipient",
+            "amount": 1,
+            "nonce": "7347d3b9ff3dd027601088bc6c4da622"
+          },
+          "public": "f8d7f6a14863975c6b6f1f45a8991490bd66662d3ae97e09f58333d15f5bd65cabdfcb21d343d1a65af24883dbb60303927b4771b0ca2fb1c5f8d8f8c145a37c",
+          "signature": "f557cce60c691bba7afcaf412040d55a2cb49b857a7a5f6ceca945c25e2eeb5947f2bc86766783685c9da343fe666ceaaac4ed43a7cc6c9ee30e0b07937e8f80"
+        },
+        "miner_public": "fb6e25268db354982a8066efa96c6ee60f42e81df7a4768a1cce856a885648d86defde4b4e7e04d0f651a007fb019ed05f4e1a95bf04ddb844c4b86dbf959a17",
+        "signature": "8a587709e0e2f6cee43a5b49cae7917f3b69eaaed3e3f77428aa07dae4decbec8a8ca8567efa4aa591d3415f385d48538a428b17b5ddd87eca2c1b6222a4c4ba"
+      },
+      "total_wall_s": 0.35531666688621044,
+      "total_cpu_s": 0.355633,
+      "boundary": "随机PoW有方差；同机节点数不等于独立算力。CPU秒不是功率。功率与能耗仅在输入外部实测整机功率时计算。"
+    },
+    {
+      "algorithm": "SM3 + SM2/SM3",
+      "model": "同机线程竞争PoW，不是多台物理矿机或比特币主网",
+      "nodes": 8,
+      "difficulty": 12,
+      "rounds": 3,
+      "repetitions": 3,
+      "rows": [
+        {
+          "nodes": 8,
+          "repeat": 1,
+          "height": 1,
+          "success": true,
+          "hashes": 3440,
+          "elapsed_s": 0.010191833833232522,
+          "cpu_s": 0.010462999999999889,
+          "hashes_per_s": 337525.12612432794,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 0
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            },
+            {
+              "node": 2,
+              "attempts": 1195
+            },
+            {
+              "node": 3,
+              "attempts": 0
+            },
+            {
+              "node": 4,
+              "attempts": 0
+            },
+            {
+              "node": 5,
+              "attempts": 0
+            },
+            {
+              "node": 6,
+              "attempts": 0
+            },
+            {
+              "node": 7,
+              "attempts": 2245
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 8,
+          "repeat": 1,
+          "height": 2,
+          "success": true,
+          "hashes": 6643,
+          "elapsed_s": 0.018491624854505062,
+          "cpu_s": 0.01889099999999999,
+          "hashes_per_s": 359243.7145068723,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 0
+            },
+            {
+              "node": 1,
+              "attempts": 2295
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 0
+            },
+            {
+              "node": 4,
+              "attempts": 0
+            },
+            {
+              "node": 5,
+              "attempts": 0
+            },
+            {
+              "node": 6,
+              "attempts": 0
+            },
+            {
+              "node": 7,
+              "attempts": 4348
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 8,
+          "repeat": 1,
+          "height": 3,
+          "success": true,
+          "hashes": 1718,
+          "elapsed_s": 0.005065707955509424,
+          "cpu_s": 0.005233000000000043,
+          "hashes_per_s": 339143.1197946413,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 0
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 0
+            },
+            {
+              "node": 4,
+              "attempts": 0
+            },
+            {
+              "node": 5,
+              "attempts": 0
+            },
+            {
+              "node": 6,
+              "attempts": 0
+            },
+            {
+              "node": 7,
+              "attempts": 1718
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 8,
+          "repeat": 2,
+          "height": 1,
+          "success": true,
+          "hashes": 9269,
+          "elapsed_s": 0.025104874977841973,
+          "cpu_s": 0.0253899999999998,
+          "hashes_per_s": 369211.15951308224,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 0
+            },
+            {
+              "node": 1,
+              "attempts": 89
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 2165
+            },
+            {
+              "node": 4,
+              "attempts": 2364
+            },
+            {
+              "node": 5,
+              "attempts": 2352
+            },
+            {
+              "node": 6,
+              "attempts": 0
+            },
+            {
+              "node": 7,
+              "attempts": 2299
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 8,
+          "repeat": 2,
+          "height": 2,
+          "success": true,
+          "hashes": 2158,
+          "elapsed_s": 0.00624875002540648,
+          "cpu_s": 0.006437000000000026,
+          "hashes_per_s": 345349.0684098253,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 0
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 0
+            },
+            {
+              "node": 4,
+              "attempts": 0
+            },
+            {
+              "node": 5,
+              "attempts": 0
+            },
+            {
+              "node": 6,
+              "attempts": 0
+            },
+            {
+              "node": 7,
+              "attempts": 2158
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 8,
+          "repeat": 2,
+          "height": 3,
+          "success": true,
+          "hashes": 1032,
+          "elapsed_s": 0.003422749927267432,
+          "cpu_s": 0.003609999999999891,
+          "hashes_per_s": 301511.94855883083,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 0
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 0
+            },
+            {
+              "node": 4,
+              "attempts": 0
+            },
+            {
+              "node": 5,
+              "attempts": 0
+            },
+            {
+              "node": 6,
+              "attempts": 0
+            },
+            {
+              "node": 7,
+              "attempts": 1032
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 8,
+          "repeat": 3,
+          "height": 1,
+          "success": true,
+          "hashes": 5422,
+          "elapsed_s": 0.01505512511357665,
+          "cpu_s": 0.015341000000000049,
+          "hashes_per_s": 360143.1379079316,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 2344
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 0
+            },
+            {
+              "node": 4,
+              "attempts": 760
+            },
+            {
+              "node": 5,
+              "attempts": 0
+            },
+            {
+              "node": 6,
+              "attempts": 0
+            },
+            {
+              "node": 7,
+              "attempts": 2318
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 8,
+          "repeat": 3,
+          "height": 2,
+          "success": true,
+          "hashes": 72,
+          "elapsed_s": 0.0006508748047053814,
+          "cpu_s": 0.0008420000000000094,
+          "hashes_per_s": 110620.35199317757,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 0
+            },
+            {
+              "node": 1,
+              "attempts": 0
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 0
+            },
+            {
+              "node": 4,
+              "attempts": 0
+            },
+            {
+              "node": 5,
+              "attempts": 0
+            },
+            {
+              "node": 6,
+              "attempts": 0
+            },
+            {
+              "node": 7,
+              "attempts": 72
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        },
+        {
+          "nodes": 8,
+          "repeat": 3,
+          "height": 3,
+          "success": true,
+          "hashes": 5929,
+          "elapsed_s": 0.016669249860569835,
+          "cpu_s": 0.01702999999999988,
+          "hashes_per_s": 355684.87182045984,
+          "workers": [
+            {
+              "node": 0,
+              "attempts": 0
+            },
+            {
+              "node": 1,
+              "attempts": 2309
+            },
+            {
+              "node": 2,
+              "attempts": 0
+            },
+            {
+              "node": 3,
+              "attempts": 0
+            },
+            {
+              "node": 4,
+              "attempts": 0
+            },
+            {
+              "node": 5,
+              "attempts": 0
+            },
+            {
+              "node": 6,
+              "attempts": 0
+            },
+            {
+              "node": 7,
+              "attempts": 3620
+            }
+          ],
+          "measured_system_w": null,
+          "energy_j": null,
+          "energy_basis": "未接入功率仪；未测量"
+        }
+      ],
+      "summary": {
+        "successes": 9,
+        "mean_hashes": 3964.777777777778,
+        "mean_elapsed_s": 0.011211199039179418,
+        "mean_cpu_s": 0.01147077777777773
+      },
+      "sample": {
+        "header": {
+          "previous": "00033c1f0c102ec572940d0973c7315f72db4bf6765da671d2425c8641f57246",
+          "height": 3,
+          "merkle": "97f54b1533b07e306b0d6262ec3f0cacb5808e1f498aee4740781b20c60fc09d",
+          "difficulty": 12,
+          "miner": 7,
+          "salt": "163053ffb0bccf2766da61c696eb3051",
+          "nonce": 3619
+        },
+        "hash": "00006850578070dd46492e86b2e0a5afb45bb4f4173ca0b16cd79f33351f15a8",
+        "transaction": {
+          "body": {
+            "from": "771d326b3d2d42acc3c1ecbe4452f4883a52d975b72fc2e9eff5d1a1bceda5f84259eb4692e49659c1a5293a6947615a75f32a13fc27e98fa80b19810e67d300",
+            "to": "classroom-recipient",
+            "amount": 1,
+            "nonce": "7fb767d7de01841f25860fd42a03954b"
+          },
+          "public": "771d326b3d2d42acc3c1ecbe4452f4883a52d975b72fc2e9eff5d1a1bceda5f84259eb4692e49659c1a5293a6947615a75f32a13fc27e98fa80b19810e67d300",
+          "signature": "76a4e4de306ddf0ae2cc08e3f18e2bb5246dfc6b2b2c0c60454d607ff01d02689a6db682b746ca763792a4dcb21ac1dbeea13ad693dcae8b27e76565d517222e"
+        },
+        "miner_public": "72aa12d94539dc596f11694142aceeef57e22253ce0267bbf8720df41e0b16a43121f0ee036b3dce390f8ab01ffdc5d5e564b8e5b4638913e7b0c72a53ecaa49",
+        "signature": "6cec36b4cf7caad9b338afb430077905dbc67f3c2ab378141f7d0802ffbbbf0e95246ac6f85b391bbb005a179062485adc17c25cceb14edeb503beb493989f44"
+      },
+      "total_wall_s": 0.3479861670639366,
+      "total_cpu_s": 0.3498509999999999,
+      "boundary": "随机PoW有方差；同机节点数不等于独立算力。CPU秒不是功率。功率与能耗仅在输入外部实测整机功率时计算。"
+    }
+  ]
+}

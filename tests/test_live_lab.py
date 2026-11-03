@@ -55,7 +55,7 @@ class LiveTests(unittest.TestCase):
         event={'id':'fresh-command-id','action':'prepare','payload':dict(name='alice',password=DEMO_PASSWORD,n=4,t=8)}
         first=self.lab.handle(event);self.assertTrue(first['ok']);self.assertEqual(self.lab.handle(event),first)
         self.assertEqual(len(self.lab.snapshot()['wallets']['alice']),1)
-        for action,payload in [('prepare',dict(name='alice',password=DEMO_PASSWORD,n=True,t=8)),('account_active',dict(name='alice',active='false')),('p2p_run',dict(size=1,count=3,profile='normal',optimized=True,workers=4)),('answer_save',dict(qid=1,answer='fake'))]:
+        for action,payload in [('prepare',dict(name='alice',password=DEMO_PASSWORD,n=True,t=8)),('account_active',dict(name='alice',active='false')),('p2p_run',dict(size=1,count=3,profile='normal',optimized=True,workers=4)),('answer_save',dict(qid=999,answer='fake'))]:
             result=self.lab.handle({'id':secrets.token_hex(12),'action':action,'payload':payload})
             self.assertFalse(result['ok'],result)
 
@@ -85,13 +85,13 @@ class LiveTests(unittest.TestCase):
         with patch('live_lab.load_questions',return_value=[{'id':1,'question':'测试夹具题目','answer':''}]):
             self.command('answer_save',qid=1,answer='会话作答')
             self.assertEqual(self.lab.snapshot()['questions'][0]['answer'],'会话作答')
-        self.assertEqual(self.lab.snapshot()['questions'],[])
+        self.assertEqual(len(self.lab.snapshot()['questions']),2)
 
     def test_teacher_question_entry_answer_and_no_source_mutation(self):
         first=self.command('question_add',question='测试夹具中的教师原题')['question_id']
         second=self.command('question_add',question='另一个测试夹具题目')['question_id']
-        self.assertEqual((first,second),(1,2))
+        self.assertEqual((first,second),(3,4))
         self.command('answer_save',qid=first,answer='测试会话答案')
         rows=self.lab.snapshot()['questions']
-        self.assertEqual(rows[0]['answer'],'测试会话答案')
-        self.assertEqual(json.loads((Path(__file__).resolve().parents[1]/'content/coursework.json').read_text()),[])
+        self.assertEqual(next(q for q in rows if q['id']==first)['answer'],'测试会话答案')
+        self.assertEqual(len(json.loads((Path(__file__).resolve().parents[1]/'content/coursework.json').read_text())),2)

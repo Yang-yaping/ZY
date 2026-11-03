@@ -29,6 +29,7 @@ class LiveLab:
         self.answers = {}
         self.extra_questions = []
         self.result = None
+        self.mining_result = None
         self.notice = None
         self.seen = {}
         self.revision = 0
@@ -191,6 +192,11 @@ class LiveLab:
                 self.result = None
                 raise ProtocolError(f'本次网络实验失败：{type(exc).__name__}: {exc}') from exc
             return {'message': f"同步完成：高度 {self.result['sync']['height']}，所有密码学校验通过"}
+        if action == 'mining_run':
+            from mining.lab import experiment
+            self.mining_result = experiment(nodes=p.get('nodes'), difficulty=p.get('difficulty'),
+                rounds=p.get('rounds'), repetitions=p.get('repetitions'), watts=p.get('watts'))
+            return {'message':'国密PoW实验完成：SM3工作量与SM2签名已实际检验；功率以测量口径为准'}
         if action == 'question_add':
             text = p.get('question')
             require(isinstance(text, str) and 0 < len(text.strip()) <= 20000, '老师题目须为1至20000字符')
@@ -247,4 +253,5 @@ class LiveLab:
         for q in questions:
             q['answer'] = self.answers.get(q['id'], q.get('answer', ''))
         return {'revision': self.revision, 'notice': self.notice, 'bank': dashboard, 'public': self.bank.public,
-                'wallets': wallets, 'payments': payments, 'p2p': self.result, 'questions': questions, 'bench':self.bench}
+                'wallets': wallets, 'payments': payments, 'p2p': self.result, 'questions': questions, 'bench':self.bench,
+                'mining':getattr(self,'mining_result',None)}

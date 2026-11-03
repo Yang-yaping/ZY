@@ -169,13 +169,18 @@ function mountLab(root, initial, send) {
   }
   function renderCourse() {
     const body=$('#course-body');
+    const scroll=ui.renderedQuestion===ui.qid?(body.querySelector('.answer-pane')?.scrollTop||0):0;
     const addQuestion=`<details><summary>＋ 录入老师布置的题目</summary><form data-command="question_add"><label>粘贴老师的原题<textarea id="teacher-question" name="question" rows="4" maxlength="20000" required placeholder="粘贴实际布置的题目，不自动生成题目…"></textarea></label><div class="actions">${button('录入题目','question_add','',true)}</div></form></details>`;
     if(!data.questions.length){body.innerHTML=`<div class="course-layout"><aside class="question-nav"><h3>题目导航</h3><p class="hint">暂无老师题目</p></aside><div class="answer-pane"><h2>题目待录入</h2><p class="hint">粘贴老师题目后，按问题001、002、003…排列，左侧选择，右侧直接填写答案。</p>${addQuestion}<p class="hint">本次会话中录入与作答可下载留存，不自动编造老师的题目。</p></div></div>`;restore(body);return;}
     if(!data.questions.some(q=>q.id===ui.qid))ui.qid=data.questions[0].id;
     const q=data.questions.find(q=>q.id===ui.qid);
     const answer=ui.answers[q.id]??q.answer;
-    body.innerHTML=`<div class="course-layout"><aside class="question-nav"><h3>题目导航</h3><input id="question-search" aria-label="搜索老师题目" placeholder="搜索题目"><div id="question-list"></div></aside><div class="answer-pane"><small>问题${String(q.id).padStart(3,'0')}</small><h2>题目</h2><div class="question-text">${esc(q.question)}</div><hr class="rule"><h2>我的答案</h2><form data-command="answer_save"><textarea id="course-answer" name="answer" aria-label="我的答案" maxlength="100000" placeholder="在这里填写你的答案…">${esc(answer)}</textarea><div class="actions">${button('保存答案','answer_save','',true)}<button type="button" class="subtle" data-export-answer>下载当前答案 ↓</button><button type="button" class="subtle" data-export-course>下载全部题目与已保存答案 ↓</button></div></form><p class="hint">保存在本次会话。下载后可长期留存；刷新或服务重启可能重置会话。老师题目不分状态类别。</p>${addQuestion}</div></div>`;
-    restore(body);$('#course-answer').value=answer;renderQuestionList();
+    body.innerHTML=`<div class="course-layout"><aside class="question-nav"><h3>题目导航</h3><input id="question-search" aria-label="搜索老师题目" placeholder="搜索题目"><div id="question-list"></div></aside><div class="answer-pane"><small>问题${String(q.id).padStart(3,'0')}</small><h2>题目</h2><div class="question-text">${esc(q.question)}</div><hr class="rule"><h2>我的答案</h2><form data-command="answer_save"><textarea id="course-answer" name="answer" aria-label="我的答案" maxlength="100000" placeholder="在这里填写你的答案…">${esc(answer)}</textarea><div class="actions">${button('保存答案','answer_save','',true)}<button type="button" class="subtle" data-export-answer>下载当前答案 ↓</button><button type="button" class="subtle" data-export-course>下载全部题目与已保存答案 ↓</button></div></form><p class="hint">保存在本次会话。下载后可长期留存；刷新或服务重启可能重置会话。老师题目不分状态类别。</p>${q.lab==='mining'?renderMining():''}${addQuestion}</div></div>`;
+    restore(body);$('#course-answer').value=answer;renderQuestionList();body.querySelector('.answer-pane').scrollTop=scroll;ui.renderedQuestion=ui.qid;
+  }
+  function renderMining(){
+    const r=data.mining;
+    return `<hr class="rule"><h2>国密 PoW 测试系统</h2><p class="hint">SM3 哈希＋SM2 签名，真实搜索 nonce。同机线程节点，不连接比特币网络。</p><form data-command="mining_run"><div class="inline">${select('mining-nodes','竞争节点数','nodes',[1,2,4,8,16].map(n=>option(n)).join(''))}${select('mining-difficulty','难度（前导零位）','difficulty',[8,12,16].map(n=>option(n)).join(''))}${select('mining-rounds','每轮区块数','rounds',[1,2,3,5].map(n=>option(n)).join(''))}${select('mining-repetitions','重复轮数','repetitions',[1,2,3,5].map(n=>option(n)).join(''))}</div><label>外部仪表实测整机平均功率 W（可留空）<input id="mining-watts" name="watts" type="number" min="0.001" max="2000" step="any" placeholder="未测量请留空，不填写估计值"></label><div class="actions">${button('运行国密挖矿实验','mining_run','',true)}</div></form><p class="hint">CPU秒不是瓦数。留空时不计算能耗；输入仪表功率后仅计算挖矿阶段整机E=P×t，不能乘以同机节点数。</p>${r?`<h3>上次实际运行结果</h3><div class="metrics"><div class="metric"><strong>${r.summary.successes}</strong><small>成功区块数</small></div><div class="metric"><strong>${r.summary.mean_hashes.toFixed(0)}</strong><small>平均哈希次数</small></div><div class="metric"><strong>${r.summary.mean_cpu_s.toFixed(4)} s</strong><small>平均进程CPU秒</small></div></div>${table(r.rows,[['repeat','轮'],['nodes','节点'],['height','高度'],['success','成功'],['hashes','实际哈希次数'],['elapsed_s','秒',v=>v.toFixed(5)],['measured_system_w','整机功率W',v=>v??'未测量'],['energy_j','阶段整机能耗J',v=>v===null?'未测量':v.toFixed(5)]])}<div class="actions"><button type="button" class="subtle" data-export-mining>下载本次原始JSON ↓</button></div><details><summary>逐节点工作量与公开区块验签样例</summary><pre>${json({workers:r.rows.map(x=>x.workers),block:r.sample})}</pre></details><p class="hint">${esc(r.boundary)}</p>`:empty('尚未运行本次实验，仓库另有批量实测记录。')}`;
   }
   function renderQuestionList(){
     const text=$('#question-search')?.value.toLowerCase()||'';
@@ -196,11 +201,12 @@ function mountLab(root, initial, send) {
     event.preventDefault();const form=event.target;const b=event.submitter;const command=b?.dataset.command||form.dataset.command;if(!command)return;
     const p=Object.fromEntries([...new FormData(form)].filter(([,v])=>typeof v==='string'));
     if(b?.dataset.pid)p.pid=b.dataset.pid;
-    for(const key of ['n','t','size','count','workers'])if(key in p)p[key]=Number(p[key]);
+    for(const key of ['n','t','size','count','workers','nodes','difficulty','rounds','repetitions'])if(key in p)p[key]=Number(p[key]);
     if('optimized'in p){p.optimized=p.optimized==='true';if(!p.optimized)p.workers=1;}
     if(command==='respond'){p.double=!!$('#payer-double')?.checked;p.merchant=Object.entries(data.payments).find(([,list])=>list.some(q=>q.id===p.pid))?.[0];}
     if(['offer','verify_forgery'].includes(command)){[p.owner,p.wid]=(p.coin||'').split(':');}
     if(command==='answer_save')p.qid=ui.qid;
+    if(command==='mining_run')p.watts=p.watts===''?null:Number(p.watts);
     submit(command,p);
   });
   root.addEventListener('input',event=>{
@@ -236,6 +242,7 @@ function mountLab(root, initial, send) {
     if(b.dataset.exportReceipt)download(Object.values(data.payments).flat().find(q=>q.id===b.dataset.exportReceipt).transcript,'transcript.json');
     if(b.hasAttribute('data-export-run')&&data.p2p)download(data.p2p,'single_run.json');
     if(b.hasAttribute('data-export-bench'))download(data.bench,'batch_means.json');
+    if(b.hasAttribute('data-export-mining')&&data.mining)download(data.mining,'sm3_sm2_run.json');
     if(b.hasAttribute('data-export-course'))download(data.questions,'coursework.json');
     if(b.hasAttribute('data-export-answer'))download({...data.questions.find(q=>q.id===ui.qid),answer:$('#course-answer').value},`问题${String(ui.qid).padStart(3,'0')}.json`);
   });
@@ -285,7 +292,7 @@ function mountLab(root, initial, send) {
     renderBank();if(ui.bankTab==='收款人')renderMerchantPayments();renderNodes();renderCourse();observer.observe(root);media.addEventListener('change',finishAnimations);
     nav(targetNav);root.dataset.ready='true';
   }
-  ui.fields['payer-n']='16';ui.fields['payer-t']='32';ui.fields['node-size']='262144';ui.fields['node-count']='3';ui.fields['node-workers']='4';
+  ui.fields['mining-difficulty']='12';ui.fields['mining-rounds']='3';ui.fields['mining-repetitions']='3';ui.fields['payer-n']='16';ui.fields['payer-t']='32';ui.fields['node-size']='262144';ui.fields['node-count']='3';ui.fields['node-workers']='4';
   settle();root.dataset.transitioning='false';root.focus({preventScroll:true});
   return {update,cleanup(){observer.disconnect();media.removeEventListener('change',finishAnimations);}};
 }
