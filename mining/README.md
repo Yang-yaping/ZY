@@ -1,6 +1,6 @@
 # 国密PoW课程实验
 
-网站路径：课程作业 → 问题002 → 国密PoW测试系统。修改节点数、难度、区块数和重复次数后运行，下载本次原始JSON。也可以在项目根目录运行 `python -m mining.run_experiments` 复测批量场景，再运行 `python -m mining.analyze` 更新对应汇总。
+网站路径：国密实验（独立分页 /mining）→ 国密PoW测试系统。修改节点数、难度、区块数和重复次数后运行，下载本次原始JSON。也可以在项目根目录运行 `python -m mining.run_experiments` 复测批量场景，再运行 `python -m mining.analyze` 更新对应汇总。
 
 SM3来自Python/OpenSSL，SM2/SM3来自gmssl 3.2.2。签名随机数显式用secrets产生，避免库默认普通随机数；私钥不出现在结果或浏览器中。仅课堂教学，非经过审计的生产密码实现。
 

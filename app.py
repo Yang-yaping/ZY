@@ -18,5 +18,6 @@ navigation = st.navigation({'课程页面':[
     st.Page('bank_page.py',title='线上银行',icon='💵',url_path='bank'),
     st.Page('node_page.py',title='节点模拟器',icon='🔗',url_path='p2p'),
     st.Page('coursework_page.py',title='课程作业',icon='📖',url_path='coursework'),
+    st.Page('mining_page.py',title='国密实验',icon='🧪',url_path='mining'),
 ]})
 navigation.run()

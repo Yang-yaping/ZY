@@ -33,13 +33,13 @@ class ShowcaseTests(unittest.TestCase):
         self.assertEqual(len(app.get('iframe')),0)
         app.switch_page('coursework_page.py').run()
         self.assertEqual(len(app.exception),0)
-        self.assertEqual([q['id'] for q in app.session_state['_live_lab'].snapshot()['questions']],[1,2])
+        self.assertEqual([q['id'] for q in app.session_state['_live_lab'].snapshot()['questions']],[1])
         ui=(ROOT/'web/live/controller.js').read_text()
         self.assertNotIn("target = '_blank'",ui)
         self.assertIn("sender('action',request)",ui)
 
     def test_question_order_duplicate_validation_and_no_invented_questions(self):
-        self.assertEqual([q['id'] for q in load_questions()],[1,2])
+        self.assertEqual([q['id'] for q in load_questions()],[1])
         with tempfile.TemporaryDirectory(dir=ROOT/'tmp') as folder:
             p=Path(folder)/'questions.json'
             p.write_text(json.dumps([{'id':3,'question':'三'},{'id':1,'question':'一','answer':'答'}]))

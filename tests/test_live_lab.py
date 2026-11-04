@@ -85,13 +85,13 @@ class LiveTests(unittest.TestCase):
         with patch('live_lab.load_questions',return_value=[{'id':1,'question':'测试夹具题目','answer':''}]):
             self.command('answer_save',qid=1,answer='会话作答')
             self.assertEqual(self.lab.snapshot()['questions'][0]['answer'],'会话作答')
-        self.assertEqual(len(self.lab.snapshot()['questions']),2)
+        self.assertEqual(len(self.lab.snapshot()['questions']),1)
 
     def test_teacher_question_entry_answer_and_no_source_mutation(self):
         first=self.command('question_add',question='测试夹具中的教师原题')['question_id']
         second=self.command('question_add',question='另一个测试夹具题目')['question_id']
-        self.assertEqual((first,second),(3,4))
+        self.assertEqual((first,second),(2,3))
         self.command('answer_save',qid=first,answer='测试会话答案')
         rows=self.lab.snapshot()['questions']
         self.assertEqual(next(q for q in rows if q['id']==first)['answer'],'测试会话答案')
-        self.assertEqual(len(json.loads((Path(__file__).resolve().parents[1]/'content/coursework.json').read_text())),2)
+        self.assertEqual(len(json.loads((Path(__file__).resolve().parents[1]/'content/coursework.json').read_text())),1)

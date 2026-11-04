@@ -6,8 +6,8 @@ function mountLab(root, initial, send) {
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const short = value => String(value || '').slice(0, 12);
   const json = value => esc(JSON.stringify(value, null, 2));
-  const labels = ['首页', '线上银行', '节点模拟器', '课程作业'];
-  const sceneIds = ['home', 'bank', 'nodes', 'coursework'];
+  const labels = ['首页', '线上银行', '节点模拟器', '课程作业', '国密实验'];
+  const sceneIds = ['home', 'bank', 'nodes', 'coursework', 'mining'];
   const profiles = {normal:'正常', disconnect:'连接中断', unresponsive:'节点不响应', overloaded:'并发请求过多', congested:'带宽受限与高延迟'};
   const ui = {bankTab:'银行', nodeTab:'实验控制台', fields:{}, details:{}, qid:null, answers:{}, current:initial.initial || 0};
   const media = matchMedia('(prefers-reduced-motion: reduce)');
@@ -175,8 +175,14 @@ function mountLab(root, initial, send) {
     if(!data.questions.some(q=>q.id===ui.qid))ui.qid=data.questions[0].id;
     const q=data.questions.find(q=>q.id===ui.qid);
     const answer=ui.answers[q.id]??q.answer;
-    body.innerHTML=`<div class="course-layout"><aside class="question-nav"><h3>题目导航</h3><input id="question-search" aria-label="搜索老师题目" placeholder="搜索题目"><div id="question-list"></div></aside><div class="answer-pane"><small>问题${String(q.id).padStart(3,'0')}</small><h2>题目</h2><div class="question-text">${esc(q.question)}</div><hr class="rule"><h2>我的答案</h2><form data-command="answer_save"><textarea id="course-answer" name="answer" aria-label="我的答案" maxlength="100000" placeholder="在这里填写你的答案…">${esc(answer)}</textarea><div class="actions">${button('保存答案','answer_save','',true)}<button type="button" class="subtle" data-export-answer>下载当前答案 ↓</button><button type="button" class="subtle" data-export-course>下载全部题目与已保存答案 ↓</button></div></form><p class="hint">保存在本次会话。下载后可长期留存；刷新或服务重启可能重置会话。老师题目不分状态类别。</p>${q.lab==='mining'?renderMining():''}${addQuestion}</div></div>`;
+    body.innerHTML=`<div class="course-layout"><aside class="question-nav"><h3>题目导航</h3><input id="question-search" aria-label="搜索老师题目" placeholder="搜索题目"><div id="question-list"></div></aside><div class="answer-pane"><small>问题${String(q.id).padStart(3,'0')}</small><h2>题目</h2><div class="question-text">${esc(q.question)}</div><hr class="rule"><h2>我的答案</h2><form data-command="answer_save"><textarea id="course-answer" name="answer" aria-label="我的答案" maxlength="100000" placeholder="在这里填写你的答案…">${esc(answer)}</textarea><div class="actions">${button('保存答案','answer_save','',true)}<button type="button" class="subtle" data-export-answer>下载当前答案 ↓</button><button type="button" class="subtle" data-export-course>下载全部题目与已保存答案 ↓</button></div></form><p class="hint">保存在本次会话。下载后可长期留存；刷新或服务重启可能重置会话。老师题目不分状态类别。</p>${addQuestion}</div></div>`;
     restore(body);$('#course-answer').value=answer;renderQuestionList();body.querySelector('.answer-pane').scrollTop=scroll;ui.renderedQuestion=ui.qid;
+  }
+  function renderMiningPage(){
+    const body=$('#mining-body');
+    const top=body.scrollTop;
+    body.innerHTML=renderMining()+`<details><summary>实现说明与不同节点数量的实测分析</summary><p class="question-text">${esc(data.mining_assignment?.answer||'')}</p></details>`;
+    restore(body);body.scrollTop=top;
   }
   function renderMining(){
     const r=data.mining;
@@ -250,11 +256,11 @@ function mountLab(root, initial, send) {
     targetNav=index;
     $$('[data-goto]').forEach(b=>{if(Number(b.dataset.goto)===index)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
     const tab=$(`.main-nav [data-goto="${index}"]`), line=$('.nav-underline');line.style.width=tab.offsetWidth+'px';line.style.transform=`translateX(${tab.offsetLeft}px)`;
-    $('#screen-counter').textContent=String(index+1).padStart(2,'0')+' / 04';$('#screen-hint').textContent=index?'内容区可滚动 · 屏幕边缘切屏':'滚动探索';$('#previous').disabled=index===0;$('#next').disabled=index===3;
+    $('#screen-counter').textContent=String(index+1).padStart(2,'0')+' / '+String(scenes.length).padStart(2,'0');$('#screen-hint').textContent=index?'内容区可滚动 · 屏幕边缘切屏':'滚动探索';$('#previous').disabled=index===0;$('#next').disabled=index===scenes.length-1;
   }
   function settle(){scenes.forEach((s,i)=>{s.classList.toggle('is-active',i===ui.current);s.classList.remove('moving');s.inert=i!==ui.current;s.setAttribute('aria-hidden',String(i!==ui.current));s.style.zIndex='';});root.dataset.currentScene=sceneIds[ui.current];nav(ui.current);}
   async function go(index, source='nav'){
-    index=YinbiMotion.clamp(index,0,3);if(moving){if(source==='nav')pending=index;return;}if(index===ui.current)return;
+    index=YinbiMotion.clamp(index,0,scenes.length-1);if(moving){if(source==='nav')pending=index;return;}if(index===ui.current)return;
     if(!request)$('#notice').hidden=true;
     moving=true;root.dataset.transitioning='true';
     const from=scenes[ui.current],to=scenes[index],direction=Math.sign(index-ui.current);let running=[];
@@ -273,7 +279,7 @@ function mountLab(root, initial, send) {
   }
   $('#previous').onclick=()=>go(ui.current-1);$('#next').onclick=()=>go(ui.current+1);
   root.addEventListener('wheel',e=>{if(e.ctrlKey||e.metaKey||e.target.closest('input,select,textarea,[data-scroll]'))return;const {x,y}=YinbiMotion.wheelPixels(e,root.clientHeight);if(!y||Math.abs(x)>Math.abs(y))return;e.preventDefault();const d=gate.observe(y,performance.now(),moving);if(d)void go(ui.current+d,'wheel');},{passive:false});
-  root.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey||e.repeat||e.target.closest('input,textarea,select'))return;let next;if(['ArrowDown','PageDown','ArrowRight'].includes(e.key))next=ui.current+1;if(['ArrowUp','PageUp','ArrowLeft'].includes(e.key))next=ui.current-1;if(e.key==='Home')next=0;if(e.key==='End')next=3;if(next!==undefined){e.preventDefault();if(!moving)void go(next,'keyboard');}});
+  root.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey||e.repeat||e.target.closest('input,textarea,select'))return;let next;if(['ArrowDown','PageDown','ArrowRight'].includes(e.key))next=ui.current+1;if(['ArrowUp','PageUp','ArrowLeft'].includes(e.key))next=ui.current-1;if(e.key==='Home')next=0;if(e.key==='End')next=scenes.length-1;if(next!==undefined){e.preventDefault();if(!moving)void go(next,'keyboard');}});
   root.addEventListener('touchstart',e=>{if(e.touches.length!==1||e.target.closest('[data-scroll],input,textarea,select')){touch=null;return;}touch={x:e.touches[0].clientX,y:e.touches[0].clientY,at:performance.now(),blocked:moving};},{passive:true});
   root.addEventListener('touchmove',e=>{if(touch&&e.touches.length===1&&Math.abs(e.touches[0].clientY-touch.y)>Math.abs(e.touches[0].clientX-touch.x))e.preventDefault();},{passive:false});
   root.addEventListener('touchend',e=>{if(!touch)return;const t=touch;touch=null;const p=e.changedTouches[0];if(!p||t.blocked||moving||performance.now()-t.at>1200)return;const y=p.clientY-t.y,x=p.clientX-t.x;if(Math.abs(y)>46&&Math.abs(y)>Math.abs(x)*1.1)void go(ui.current+(y<0?1:-1),'touch');},{passive:true});
@@ -289,7 +295,7 @@ function mountLab(root, initial, send) {
       request=null;showNotice(data.notice.message,data.notice.ok?'success':'error');
     }
     if(!imageReady){$('.home-image').src=data.assets+'home.png';$$('[data-asset]').forEach(img=>img.src=data.assets+img.dataset.asset);}
-    renderBank();if(ui.bankTab==='收款人')renderMerchantPayments();renderNodes();renderCourse();observer.observe(root);media.addEventListener('change',finishAnimations);
+    renderBank();if(ui.bankTab==='收款人')renderMerchantPayments();renderNodes();renderCourse();renderMiningPage();observer.observe(root);media.addEventListener('change',finishAnimations);
     nav(targetNav);root.dataset.ready='true';
   }
   ui.fields['mining-difficulty']='12';ui.fields['mining-rounds']='3';ui.fields['mining-repetitions']='3';ui.fields['payer-n']='16';ui.fields['payer-t']='32';ui.fields['node-size']='262144';ui.fields['node-count']='3';ui.fields['node-workers']='4';

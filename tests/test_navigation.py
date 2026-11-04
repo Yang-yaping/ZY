@@ -19,7 +19,7 @@ class NavigationTests(unittest.TestCase):
         wid=command('prepare',**auth,n=4,t=8)['wallet_id']
         command('submit',**auth,wid=wid);command('issue',**auth,wid=wid)
         command('p2p_run',size=65536,count=3,profile='normal',optimized=True,workers=4)
-        for file in ('bank_page.py','node_page.py','coursework_page.py','showcase.py'):
+        for file in ('bank_page.py','node_page.py','coursework_page.py','mining_page.py','showcase.py'):
             app.switch_page(file).run()
             self.assertFalse(app.exception)
             self.assertEqual(len(app.get('bidi_component')),1)

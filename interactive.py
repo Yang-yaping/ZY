@@ -1,5 +1,6 @@
 """Native Streamlit bidirectional component, not a screenshot or linked iframe."""
 from pathlib import Path
+import json
 
 import streamlit as st
 from streamlit.components.v2 import component
@@ -36,9 +37,10 @@ html,body,.stApp{background:#020708!important;overflow:hidden!important}
             lab.handle(event)
 
     data=lab.snapshot()
+    data['mining_assignment']=json.loads((ROOT/'content/mining.json').read_text())
     base=st.get_option('server.baseUrlPath').strip('/')
     data['assets']=('/'+base if base else '')+'/app/static/scenes/'
-    names=['home','bank','nodes','coursework']
+    names=['home','bank','nodes','coursework','mining']
     requested=st.query_params.get('section')
     data['initial']=names.index(requested) if requested in names else initial
     version=':'.join(str(p.stat().st_mtime_ns) for p in (ROOT/'web/live').iterdir() if p.is_file())
